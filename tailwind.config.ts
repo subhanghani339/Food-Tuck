@@ -8,6 +8,18 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        helvetica: ['Helvetica', 'Arial', 'sans-serif'],
+        inter: ['Inter', 'Arial', 'sans-serif'],
+        greatvibes: ['Great Vibes', 'cursive'],
+      },
+      container: {
+        center: true,
+        padding: '1rem',
+        screens: {
+          DEFAULT: '1320px'
+        }
+      },
       colors: {
         brand: {
           100: "#195A00",

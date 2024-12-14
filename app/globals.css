@@ -2,3 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/helvetica/Helvetica-Bold.ttf') format('truetype'),
+       url('/fonts/helvetica/Helvetica-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply Inter font to the body text globally */
+body {
+  @apply font-inter;
+}
+
+/* Apply Helvetica font to all heading elements globally */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-helvetica;
+}
+
+/* You can apply Great Vibes to specific elements (e.g., titles or special text) */
+h1.special,
+h2.special,
+.special-text {
+  @apply font-greatvibes;
+}

@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${greatVibes.variable} ${inter.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         {children}
       </body>
