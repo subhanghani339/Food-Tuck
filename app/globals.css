@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('/fonts/helvetica/Helvetica-Bold.ttf') format('truetype'),
-       url('/fonts/helvetica/Helvetica-Light.ttf') format('truetype');
+  font-family: "Helvetica";
+  src: url("/fonts/helvetica/Helvetica-Bold.ttf") format("truetype"),
+    url("/fonts/helvetica/Helvetica-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -34,6 +34,7 @@ h2.special,
 
 html {
   scroll-behavior: smooth;
+  user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -41,11 +42,11 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #0D0D0D;
+  background-color: #0d0d0d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #FF9F0D;
+  background-color: #ff9f0d;
 }
 
 ::-webkit-scrollbar-thumb:hover {
