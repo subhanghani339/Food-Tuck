@@ -45,7 +45,7 @@ const Header = () => {
         {/* Menu  */}
         <div className="hidden md:flex text-white gap-5">
           {menus.map((menu, index) => (
-            <Link key={index} href={"#"}>
+            <Link key={index} href={"#"} className="transition-all duration-520 hover:text-brand-500">
               {menu?.name}
             </Link>
           ))}
