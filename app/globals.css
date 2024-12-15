@@ -32,7 +32,7 @@ h2.special,
   @apply font-greatvibes;
 }
 
-* {
+html {
   scroll-behavior: smooth;
 }
 
