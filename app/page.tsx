@@ -1,5 +1,6 @@
 import AboutUs from "./components/AboutUs/AboutUs";
 import FoodCategory from "./components/FoodCategory/FoodCategory";
+import Footer from "./components/Footer/Footer";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroBanner />
       <AboutUs />
       <FoodCategory />
+      <Footer />
     </div>
   );
 }
