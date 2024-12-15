@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
-
 const greatVibes = Great_Vibes({
   variable: "--font-great-vibes",
   subsets: ["latin"],
@@ -12,7 +11,7 @@ const greatVibes = Great_Vibes({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -28,10 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} antialiased`}
-      >
+      <body className={`${inter.variable} antialiased`}>
         {children}
+
+        <div className="bg-black-500 text-white text-center">Cloned By Muhammad Subhan</div>
       </body>
     </html>
   );
