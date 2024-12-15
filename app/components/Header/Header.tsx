@@ -42,7 +42,7 @@ const Header = () => {
       </h1>
 
       <div className="flex justify-between items-center">
-        {/* menu  */}
+        {/* Menu  */}
         <div className="flex text-white gap-5">
           {menus.map((menu, index) => (
             <Link key={index} href={"#"}>
@@ -52,20 +52,30 @@ const Header = () => {
         </div>
 
         {/* Search bar */}
-        <div className="flex gap-2 border w-max py-2 px-4 rounded-3xl text-white border-brand-500">
-          <input
-            type="text"
-            name="search"
-            placeholder="Search..."
-            id="search"
-            className="bg-transparent focus-visible:border-none outline-none"
-          />
+        <div className="flex gap-2">
+          <div className="flex gap-2 border w-max py-2 px-4 rounded-3xl text-white border-brand-500">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search..."
+              id="search"
+              className="bg-transparent focus-visible:border-none outline-none placeholder:text-white"
+            />
+            <Image
+              src="/icons/Search.svg"
+              alt="search icon"
+              height={24}
+              width={24}
+              priority
+              style={{ cursor: "pointer" }}
+            />
+          </div>
           <Image
-            src="/icons/Search.svg"
-            alt="search icon"
-            height={24}
+            src="/icons/Handbag.svg"
+            alt="handbag icon"
             width={24}
-            priority
+            height={42}
+            style={{ cursor: "pointer" }}
           />
         </div>
       </div>
