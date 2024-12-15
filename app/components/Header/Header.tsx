@@ -36,14 +36,14 @@ const Header = () => {
   return (
     <div className="container">
       {/* brand name */}
-      <h1 className="text-center text-brand-500 text-2xl">
+      <h1 className="text-center text-brand-500 text-2xl mb-4 md:mb-2">
         Food
         <span className="text-white">tuck</span>
       </h1>
 
       <div className="flex justify-between items-center">
         {/* Menu  */}
-        <div className="flex text-white gap-5">
+        <div className="hidden md:flex text-white gap-5">
           {menus.map((menu, index) => (
             <Link key={index} href={"#"}>
               {menu?.name}
