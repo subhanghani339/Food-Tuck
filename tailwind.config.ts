@@ -17,7 +17,7 @@ export default {
         center: true,
         padding: '1rem',
         screens: {
-          DEFAULT: '1320px'
+          DEFAULT: '1336px'
         }
       },
       colors: {
