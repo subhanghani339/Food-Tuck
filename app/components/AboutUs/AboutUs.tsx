@@ -20,13 +20,13 @@ const AboutUs = () => {
           consequat.
         </p>
 
-        <ul className="list-disc space-y-2">
-          <li> Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
-          <li>
+        <ul className="space-y-2">
+          <li className="before:content-['✓'] before:mr-2"> Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
+          <li className="before:content-['✓'] before:mr-2">
             {" "}
             Quisque diam pellentesque bibendum non dui volutpat fringilla{" "}
           </li>
-          <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit </li>
+          <li className="before:content-['✓'] before:mr-2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </li>
         </ul>
 
         <SolidButton text={"Read More"} />
