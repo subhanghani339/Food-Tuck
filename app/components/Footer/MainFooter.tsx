@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -68,13 +69,28 @@ const MainFooter = () => {
                     safe, and professional chauffeured car
                     service in major cities across World.
                 </p>
+
+                <div className='flex gap-4 mt-6'>
+                    <Image
+                        src={"/images/home/opening-hours.svg"}
+                        alt="Opening Hours"
+                        width={78}
+                        height={72}
+                    />
+
+                    <div>
+                        <p>Opening Hours</p>
+                        <p>Mon - Sat(8.00 - 6.00)</p>
+                        <p>Sunday - Closed</p>
+                    </div>
+                </div>
             </div>
 
             <div>
                 <h5 className='font-bold mb-4 text-2xl'>Useful Links</h5>
                 <div className='flex flex-col gap-6'>
                     {usefulLinks.map((link, index) => (
-                        <Link key={index} href={link.src}>
+                        <Link key={index} href={link.src} className='w-max'>
                             {link.name}
                         </Link>
                     ))}
@@ -85,7 +101,7 @@ const MainFooter = () => {
                 <h5 className='font-bold mb-4 text-2xl'>Help?</h5>
                 <div className='flex flex-col gap-6'>
                     {helpLinks.map((link, index) => (
-                        <Link key={index} href={link.src}>
+                        <Link key={index} href={link.src} className='w-max'>
                             {link.name}
                         </Link>
                     ))}
@@ -93,7 +109,7 @@ const MainFooter = () => {
             </div>
 
             <div>
-            <h5 className='font-bold mb-4 text-2xl'>Recent Post</h5>
+                <h5 className='font-bold mb-4 text-2xl'>Recent Post</h5>
             </div>
         </div>
     )
