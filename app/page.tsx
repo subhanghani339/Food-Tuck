@@ -1,4 +1,5 @@
 import AboutUs from "./components/AboutUs/AboutUs";
+import Blogs from "./components/Blogs/Blogs";
 import FoodCategory from "./components/FoodCategory/FoodCategory";
 import Footer from "./components/Footer/Footer";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
@@ -15,6 +16,7 @@ export default function Home() {
       <WhyChooseUs />
       <Summary />
       <OurChefs />
+      <Blogs />
       <Footer />
     </div>
   );
