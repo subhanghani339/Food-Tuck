@@ -21,7 +21,7 @@ const MultiHeading: React.FC<MultiHeadingProps> = ({
         {subheading}
       </h2>
       <h3
-        className={`text-5xl text-white ${
+        className={`text-5xl text-white font-bold ${
           textAlignment ? textAlignment : "text-left"
         }`}
       >

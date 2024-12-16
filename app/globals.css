@@ -4,9 +4,15 @@
 
 @font-face {
   font-family: "Helvetica";
-  src: url("/fonts/helvetica/Helvetica-Bold.ttf") format("truetype"),
-    url("/fonts/helvetica/Helvetica-Light.ttf") format("truetype");
-  font-weight: normal;
+  src: url("/fonts/helvetica/Helvetica-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/fonts/helvetica/Helvetica-Light.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 

@@ -2,6 +2,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import FoodCategory from "./components/FoodCategory/FoodCategory";
 import Footer from "./components/Footer/Footer";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
+import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroBanner />
       <AboutUs />
       <FoodCategory />
+      <WhyChooseUs />
       <Footer />
     </div>
   );
