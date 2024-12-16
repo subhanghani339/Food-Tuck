@@ -2,6 +2,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import FoodCategory from "./components/FoodCategory/FoodCategory";
 import Footer from "./components/Footer/Footer";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
+import OurChefs from "./components/OurChefs/OurChefs";
 import Summary from "./components/Summary/Summary";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <FoodCategory />
       <WhyChooseUs />
       <Summary />
+      <OurChefs />
       <Footer />
     </div>
   );

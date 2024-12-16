@@ -5,7 +5,7 @@ import SolidButton from "../Buttons/SolidButton";
 
 const AboutUs = () => {
   return (
-    <div className="container grid gap-4 grid-cols-12 py-10">
+    <div className="container grid gap-4 grid-cols-12 py-16">
       <div className="col-span-12 md:col-span-5 flex flex-col items-start gap-8">
         <MultiHeading
           heading="We Create the best foody product"

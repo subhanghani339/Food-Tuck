@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
         { url: 'images/home/dinner.svg', text: 'Dinner' },
     ]
     return (
-        <div className="container grid gap-4 grid-cols-12 py-10">
+        <div className="container grid gap-4 grid-cols-12 py-16">
             <div className="col-span-12 md:col-span-7 me-auto">
                 <Image
                     src={"/images/home/why-choose-us.svg"}
