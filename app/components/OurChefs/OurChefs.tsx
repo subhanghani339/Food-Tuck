@@ -37,12 +37,16 @@ const OurChefs = () => {
         {ourChef.map((chef, index) => (
           <div key={index} className="relative">
             <Image src={chef.src} alt={chef.name} width={712} height={791} />
-            <div className="max-w-44 bg-white text-grey-100 px-6 py-2 absolute bottom-0 w-full rounded-bl-lg">
-                <h6 className="font-bold">{chef.name}</h6>
-                <p>{chef.designation}</p>
+            <div className="max-w-44 bg-white text-grey-100 px-5 py-2 absolute bottom-0 w-full rounded-bl-lg">
+              <h6 className="font-bold">{chef.name}</h6>
+              <p>{chef.designation}</p>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-12 flex justify-center">
+        <button className="bg-transparent border border-brand-500 rounded-full px-6 py-2">See More</button>
       </div>
     </div>
   );
