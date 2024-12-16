@@ -58,6 +58,24 @@ const MainFooter = () => {
         },
     ]
 
+    const posts = [
+        {
+            date: '20 Feb 2022',
+            name: 'Keep Your Business ',
+            image: '/images/home/post-1.svg',
+        },
+        {
+            date: '20 Feb 2022',
+            name: 'Keep Your Business ',
+            image: '/images/home/post-2.svg',
+        },
+        {
+            date: '20 Feb 2022',
+            name: 'Keep Your Business ',
+            image: '/images/home/post-3.svg',
+        },
+    ]
+
     return (
         <div className='container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-10'>
             <div>
@@ -110,6 +128,22 @@ const MainFooter = () => {
 
             <div>
                 <h5 className='font-bold mb-4 text-2xl'>Recent Post</h5>
+
+                {posts.map((post, index) => (
+                    <div key={index} className='flex gap-4 mt-6'>
+                        <Image
+                            src={post.image}
+                            alt="Opening Hours"
+                            width={59}
+                            height={48}
+                        />
+
+                        <div>
+                            <p className='opacity-50'>{post.date}</p>
+                            <p>{post.name}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     )
