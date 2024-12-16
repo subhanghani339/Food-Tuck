@@ -32,7 +32,7 @@ const AboutUs = () => {
         <SolidButton text={"Read More"} />
       </div>
 
-      <div className="col-span-12 md:col-span-7 mx-auto">
+      <div className="col-span-12 md:col-span-7 ml-auto">
         <Image
           src={"/images/home/about.svg"}
           alt="about foods"

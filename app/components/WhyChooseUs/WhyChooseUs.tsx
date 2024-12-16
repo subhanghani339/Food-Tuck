@@ -4,9 +4,9 @@ import Image from 'next/image'
 
 const WhyChooseUs = () => {
     const whyChooseUs = [
-        { url: 'images/home/fastfood.svg', alt: 'Fast Food' },
-        { url: 'images/home/lunch.svg', alt: 'Lunch' },
-        { url: 'images/home/dinner.svg', alt: 'Dinner' },
+        { url: 'images/home/fastfood.svg', text: 'Fast Food' },
+        { url: 'images/home/lunch.svg', text: 'Lunch' },
+        { url: 'images/home/dinner.svg', text: 'Dinner' },
     ]
     return (
         <div className="container grid gap-4 grid-cols-12 py-10">
@@ -35,14 +35,16 @@ const WhyChooseUs = () => {
 
                 <div className='grid grid-cols-4 gap-8'>
                     {whyChooseUs.map((cat, index) => (
+                        <div key={index}>
                         <Image
-                            key={index}
                             src={cat.url}
-                            alt={cat.alt}
+                            alt={cat.text}
                             width={102}
                             height={100}
                             priority
                         />
+                        <p className='text-center mt-1'>{cat.text}</p>
+                        </div>
                     ))}
                 </div>
 

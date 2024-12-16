@@ -36,8 +36,8 @@ const FoodCategory = () => {
             key={index}
             src={category.src}
             alt={category.alt}
-            width={480}
-            height={400}
+            width={740}
+            height={700}
             priority
           />
         ))}
