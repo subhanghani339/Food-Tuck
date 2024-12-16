@@ -20,7 +20,7 @@ const Summary = () => {
                             height={120}
                         />
                         <h4 className='text-center mt-3 mb-2 font-bold'>{sum.heading}</h4>
-                        <h5 className='font-bold text-xl'>{sum.count}</h5>
+                        <h5 className='font-bold text-3xl'>{sum.count}</h5>
                     </div>
                 ))}
             </div>

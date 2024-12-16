@@ -1,9 +1,29 @@
-import React from 'react'
+import React from "react";
 
 const PreFooter = () => {
   return (
-    <div>PreFooter</div>
-  )
-}
+    <div className="container">
+      <div className="flex justify-between gap-4 flex-wrap py-10 border-b border-brand-500 max-w-6xl mx-auto">
+        <div>
+          <h4 className="font-bold text-3xl">
+            <span className="text-brand-500">St</span>ill You Need Our Support ?
+          </h4>
+          <p className="mt-2">Don’t wait make a smart & logical quote here. Its pretty easy.</p>
+        </div>
 
-export default PreFooter
+        <div className="flex">
+          <input 
+          type="email" 
+          placeholder="Enter Your Email" 
+          className="bg-brand-500 placeholder:text-white p-4 rounded-s-md"
+          />
+          <button className="bg-white text-brand-500 p-4 rounded-e-md">
+            Subscribe Now
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PreFooter;
