@@ -136,6 +136,7 @@ const MainFooter = () => {
                             alt="Opening Hours"
                             width={59}
                             height={48}
+                            style={{ width: 'auto', height: 'auto' }}
                         />
 
                         <div>
