@@ -32,7 +32,7 @@ const Blogs = () => {
         textAlignment={"text-center"}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         {singleBlog.map((blog, index) => (
           <BlogCard key={index} image={blog.image} title={blog.title} date={blog.date} url={blog.url} />
         ))}
