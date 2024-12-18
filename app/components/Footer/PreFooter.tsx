@@ -11,13 +11,13 @@ const PreFooter = () => {
           <p className="mt-2">Don’t wait make a smart & logical quote here. Its pretty easy.</p>
         </div>
 
-        <div className="flex">
+        <div className="flex flex-col md:flex-row md:w-max w-full rounded-md overflow-hidden bg-brand-500">
           <input 
           type="email" 
           placeholder="Enter Your Email" 
-          className="bg-brand-500 placeholder:text-white p-4 rounded-s-md"
+          className="bg-brand-500 placeholder:text-white p-4"
           />
-          <button className="bg-white text-brand-500 p-4 rounded-e-md">
+          <button className="bg-white text-brand-500 p-4">
             Subscribe Now
           </button>
         </div>
