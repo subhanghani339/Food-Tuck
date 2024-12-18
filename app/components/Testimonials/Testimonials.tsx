@@ -23,7 +23,7 @@ const Testimonials = () => {
     <div className="container pb-10">
       <MultiHeading
         subheading="Testimonials"
-        heading="What are client our saying"
+        heading="What our client are saying"
       />
 
       <div className="max-w-4xl mx-auto my-14">
