@@ -1,4 +1,5 @@
 import AboutUs from "./components/AboutUs/AboutUs";
+import Banner from "./components/Banner/Banner";
 import Blogs from "./components/Blogs/Blogs";
 import FoodCategory from "./components/FoodCategory/FoodCategory";
 import Footer from "./components/Footer/Footer";
@@ -20,6 +21,7 @@ export default function Home() {
       <OurMenu />
       <OurChefs />
       <Testimonials />
+      <Banner />
       <Blogs />
       <Footer />
     </div>
