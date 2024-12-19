@@ -45,7 +45,6 @@ const menus = [
 const MainMenu = () => {
 
   const pathname = usePathname();
-  console.log("The pathname are", pathname)
 
   return (
     <div className="hidden md:flex text-white gap-5">
