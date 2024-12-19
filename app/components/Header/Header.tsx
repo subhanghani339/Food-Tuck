@@ -1,38 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import MainMenu from "../MainMenu/MainMenu";
 
 const Header = () => {
-  const menus = [
-    {
-      id: 1,
-      name: "Home",
-    },
-    {
-      id: 2,
-      name: "Menu",
-    },
-    {
-      id: 3,
-      name: "Blog",
-    },
-    {
-      id: 4,
-      name: "Pages",
-    },
-    {
-      id: 5,
-      name: "About",
-    },
-    {
-      id: 6,
-      name: "Shop",
-    },
-    {
-      id: 7,
-      name: "Contact",
-    },
-  ];
+  
   return (
     <div className="container">
       {/* brand name */}
@@ -43,13 +14,7 @@ const Header = () => {
 
       <div className="flex justify-between items-center">
         {/* Menu  */}
-        <div className="hidden md:flex text-white gap-5">
-          {menus.map((menu, index) => (
-            <Link key={index} href={"#"} className="transition-all duration-520 hover:text-brand-500">
-              {menu?.name}
-            </Link>
-          ))}
-        </div>
+        <MainMenu />
 
         {/* Search bar */}
         <div className="flex gap-2">
