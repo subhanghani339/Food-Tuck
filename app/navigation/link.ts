@@ -60,7 +60,7 @@ export const usefulLinks = [
     src: "/",
   },
   {
-    name: "Contacts",
+    name: "Contact",
     src: "/",
   },
 ];

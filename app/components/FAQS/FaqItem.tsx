@@ -27,7 +27,7 @@ const FaqItem: React.FC<FaqItemProps> = ({
           activeFaq.has(id) ? "max-h-[500px]" : "max-h-0"
         }`}
       >
-        <p className="mt-2">{answer}</p>
+        <p className="mt-1 text-grey-200">{answer}</p>
       </div>
     </div>
   );
