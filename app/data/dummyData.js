@@ -55,62 +55,62 @@ export const ourChef = [
 export const ourAllChef = [
   {
     src: "/images/chefs/chef-1.svg",
-    name: "D.Estwood",
-    designation: "Chief Chef",
-  },
-  {
-    src: "/images/chefs/chef-2.svg",
-    name: "D.Scoriesh",
-    designation: "Assistant Chef",
-  },
-  {
-    src: "/images/chefs/chef-4.svg",
-    name: "M. William",
-    designation: "Advertising Chef",
-  },
-  {
-    src: "/images/chefs/chef-4.svg",
-    name: "W.Readfroad",
+    name: "Tahmina Rumi",
     designation: "Chef",
   },
   {
-    src: "/images/chefs/chef-1.svg",
-    name: "D.Estwood",
-    designation: "Chief Chef",
-  },
-  {
     src: "/images/chefs/chef-2.svg",
-    name: "D.Scoriesh",
-    designation: "Assistant Chef",
-  },
-  {
-    src: "/images/chefs/chef-4.svg",
-    name: "M. William",
-    designation: "Advertising Chef",
-  },
-  {
-    src: "/images/chefs/chef-4.svg",
-    name: "W.Readfroad",
+    name: "Jorina Begum",
     designation: "Chef",
   },
   {
-    src: "/images/chefs/chef-1.svg",
-    name: "D.Estwood",
-    designation: "Chief Chef",
+    src: "/images/chefs/chef-3.svg",
+    name: "M.Mohammad",
+    designation: "Chef",
   },
   {
-    src: "/images/chefs/chef-2.svg",
-    name: "D.Scoriesh",
+    src: "/images/chefs/chef-4.svg",
+    name: "Munna Kathy",
+    designation: "Chef",
+  },
+  {
+    src: "/images/chefs/chef-5.svg",
+    name: "Tahmina Rumi",
+    designation: "Chef",
+  },
+  {
+    src: "/images/chefs/chef-6.svg",
+    name: "Bisnu Devgon",
+    designation: "Chef",
+  },
+  {
+    src: "/images/chefs/chef-7.svg",
+    name: "Motin Molladsf",
+    designation: "Chef",
+  },
+  {
+    src: "/images/chefs/chef-8.svg",
+    name: "William Rumi",
+    designation: "Chef",
+  },
+  {
+    src: "/images/chefs/chef-9.svg",
+    name: "Kets William Roy",
+    designation: "Chef",
+  },
+  {
+    src: "/images/chefs/chef-10.svg",
+    name: "Mahmud Kholil",
     designation: "Assistant Chef",
   },
   {
-    src: "/images/chefs/chef-4.svg",
-    name: "M. William",
-    designation: "Advertising Chef",
+    src: "/images/chefs/chef-11.svg",
+    name: "Ataur Rehman",
+    designation: "Chef",
   },
   {
-    src: "/images/chefs/chef-4.svg",
-    name: "W.Readfroad",
+    src: "/images/chefs/chef-12.svg",
+    name: "Monalisa Holly",
     designation: "Chef",
   },
 ];
