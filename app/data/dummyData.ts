@@ -153,3 +153,131 @@ export const FAQs = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quis modi ullam amet debitis libero veritatis enim repellat optio natus eum delectus deserunt, odit expedita eos molestiae ipsa totam quidem?",
   },
 ];
+
+export const StarterMenu = {
+  name: "Starter Menu",
+  imageUrl: "/images/menu/starter-menu.svg",
+  order: 1,
+  menus: [
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+  ],
+};
+
+export const MainCourse = {
+  name: "Main Course",
+  imageUrl: "/images/menu/starter-menu.svg",
+  order: 2,
+  menus: [
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+  ],
+};
+
+export const Dessert = {
+  name: "Dessert",
+  imageUrl: "/images/menu/starter-menu.svg",
+  order: 2,
+  menus: [
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+  ],
+};
+
+export const Drinks = {
+  name: "Drinks",
+  imageUrl: "/images/menu/starter-menu.svg",
+  order: 2,
+  menus: [
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+    {
+      name: "Alder Grilled Chinook Salmon",
+      description: "Toasted French bread topped with romano, cheddar",
+      price: 32,
+      caloriesCount: 560,
+    },
+  ],
+};

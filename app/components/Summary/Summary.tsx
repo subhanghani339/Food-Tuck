@@ -10,14 +10,15 @@ const Summary = () => {
     ]
     return (
         <div className="bg-[url('/images/home/summary.svg')] bg-cover bg-center min-h-40">
-            <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-white">
                 {summary.map((sum, index) => (
                     <div key={index} className='flex flex-col items-center py-16'>
                         <Image
                             src={sum.src}
                             alt={sum.heading}
-                            width={120}
-                            height={120}
+                            width={80}
+                            height={80}
+                            className="mb-1"
                         />
                         <h4 className='text-center mt-3 mb-2 font-bold'>{sum.heading}</h4>
                         <h5 className='font-bold text-3xl'>{sum.count}</h5>
