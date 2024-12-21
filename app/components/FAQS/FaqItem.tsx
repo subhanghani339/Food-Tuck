@@ -17,7 +17,7 @@ const FaqItem: React.FC<FaqItemProps> = ({
   activeFaq,
 }) => {
   return (
-    <div className="bg-brand-700 h-max p-4">
+    <div className="bg-brand-700 rounded-lg h-max px-6 py-5">
       <div onClick={onClick} className="cursor-pointer flex justify-between items-center">
         <h2 className="font-bold">{question}</h2>
         {activeFaq.has(id) ? <PiMinusLight /> : <PiPlusLight />}
