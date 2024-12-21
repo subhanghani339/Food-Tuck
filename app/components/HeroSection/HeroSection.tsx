@@ -10,7 +10,7 @@ const HeroSection: React.FC<HeroSectionProps> = memo(
     return (
       <div
         className="min-h-72 bg-cover bg-center flex flex-col gap-5 justify-center items-center text-white"
-        style={{ backgroundImage: "url('/images/banner/main_banner.svg')" }}
+        style={{ backgroundImage: "url('/images/banner/main_banner.webp')" }}
       >
         <h1 className="text-3xl md:text-4xl font-bold"> {heading} </h1>
         <div className="flex">

@@ -1,9 +1,17 @@
+"use client";
+
 import React from "react";
 import MultiHeading from "../MultiHeading/MultiHeading";
 import Image from "next/image";
 import SolidButton from "../Buttons/SolidButton";
+import { useRouter } from "next/navigation";
 
 const AboutUs = () => {
+  const router = useRouter();
+  const GoToAbout = () => {
+    router.push("/about");
+  };
+
   return (
     <div className="container grid gap-4 grid-cols-12 py-16">
       <div className="col-span-12 md:col-span-5 flex flex-col items-start gap-8">
@@ -21,15 +29,21 @@ const AboutUs = () => {
         </p>
 
         <ul className="space-y-2">
-          <li className="before:content-['✓'] before:mr-2"> Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
+          <li className="before:content-['✓'] before:mr-2">
+            {" "}
+            Lacus nisi, et ac dapibus sit eu velit in consequat.
+          </li>
           <li className="before:content-['✓'] before:mr-2">
             {" "}
             Quisque diam pellentesque bibendum non dui volutpat fringilla{" "}
           </li>
-          <li className="before:content-['✓'] before:mr-2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </li>
+          <li className="before:content-['✓'] before:mr-2">
+            {" "}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit{" "}
+          </li>
         </ul>
 
-        <SolidButton text={"Read More"} />
+        <SolidButton text={"Read More"} onClick={GoToAbout} />
       </div>
 
       <div className="col-span-12 md:col-span-7 ml-auto">
@@ -41,7 +55,6 @@ const AboutUs = () => {
           priority
         />
       </div>
-      
     </div>
   );
 };

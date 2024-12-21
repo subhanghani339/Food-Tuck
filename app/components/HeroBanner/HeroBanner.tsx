@@ -1,10 +1,18 @@
+"use client";
+
 import React from "react";
 import Header from "@/app/components/Header/Header";
 import Image from "next/image";
 import MultiHeading from "@/app/components/MultiHeading/MultiHeading";
 import SolidButton from "@/app/components/Buttons/SolidButton";
+import { useRouter } from "next/navigation";
 
 const HeroBanner = () => {
+  const router = useRouter();
+  const GoToMenu = () => {
+    router.push("/menu");
+  };
+
   return (
     <div className='bg-[url("/images/home/background-banner.svg")] bg-cover bg-center py-10'>
       <Header />
@@ -14,7 +22,7 @@ const HeroBanner = () => {
           {/* Social Media Icons */}
           <div className="hidden md:flex flex-col items-center gap-8">
             <div className="min-h-28 border-l-white border-s" />
-            
+
             <Image
               src={"/icons/Facebook.svg"}
               alt="Food Banner Image"
@@ -53,7 +61,7 @@ const HeroBanner = () => {
               sed pharetra dictum neque massa congue
             </p>
 
-            <SolidButton text={"See Menu"} />
+            <SolidButton text={"See Menu"} onClick={GoToMenu} />
           </div>
         </div>
 

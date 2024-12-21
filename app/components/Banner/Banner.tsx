@@ -3,7 +3,7 @@ import { CiPlay1 } from "react-icons/ci";
 
 const Banner = () => {
   return (
-    <div className='text-white text-right bg-red-200 mb-14 bg-[url("/images/home/poster.svg")] bg-cover bg-center'>
+    <div className='text-white text-right bg-red-200 mb-14 py-10 bg-[url("/images/home/poster.svg")] bg-cover bg-center'>
       <div className="container min-h-[400] flex flex-col justify-center">
         <h3 className="special-text text-2xl text-brand-500">
           Restaurant Active Process
@@ -19,7 +19,7 @@ const Banner = () => {
           augue urna,
         </p>
 
-        <div className="mt-12 flex gap-5 justify-end">
+        <div className="mt-12 flex  gap-5 justify-end">
           <button className="bg-transparent border border-brand-500 rounded-full px-6 py-2">
             Read More
           </button>
