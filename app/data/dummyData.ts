@@ -114,3 +114,42 @@ export const ourAllChef = [
     designation: "Chef",
   },
 ];
+
+export const FAQs = [
+  {
+    id: 1,
+    question: "How we serve food?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quis modi ullam amet debitis libero veritatis enim repellat optio natus eum delectus deserunt, odit expedita eos molestiae ipsa totam quidem?",
+  },
+  {
+    id: 2,
+    question: "How we serve food?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quis modi ullam amet debitis libero veritatis enim repellat optio natus eum delectus deserunt, odit expedita eos molestiae ipsa totam quidem?",
+  },
+  {
+    id: 3,
+    question: "How we serve food?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quis modi ullam amet debitis libero veritatis enim repellat optio natus eum delectus deserunt, odit expedita eos molestiae ipsa totam quidem?",
+  },
+  {
+    id: 4,
+    question: "How we serve food?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quis modi ullam amet debitis libero veritatis enim repellat optio natus eum delectus deserunt, odit expedita eos molestiae ipsa totam quidem?",
+  },
+  {
+    id: 5,
+    question: "How we serve food?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quis modi ullam amet debitis libero veritatis enim repellat optio natus eum delectus deserunt, odit expedita eos molestiae ipsa totam quidem?",
+  },
+  {
+    id: 6,
+    question: "How we serve food?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quis modi ullam amet debitis libero veritatis enim repellat optio natus eum delectus deserunt, odit expedita eos molestiae ipsa totam quidem?",
+  },
+];

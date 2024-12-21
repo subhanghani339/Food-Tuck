@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         {children}
 
-        <div className="bg-black-500 text-white text-center">Cloned By Muhammad Subhan</div>
+        <div className="bg-black-500 text-white text-center">Developed By Muhammad Subhan</div>
       </body>
     </html>
   );
