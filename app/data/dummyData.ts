@@ -221,7 +221,7 @@ export const MainCourse = {
 export const Dessert = {
   name: "Dessert",
   imageUrl: "/images/menu/starter-menu.svg",
-  order: 2,
+  order: 1,
   menus: [
     {
       name: "Alder Grilled Chinook Salmon",
