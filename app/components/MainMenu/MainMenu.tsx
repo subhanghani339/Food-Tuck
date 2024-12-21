@@ -22,8 +22,8 @@ const menus = [
   },
   {
     id: 4,
-    name: "Pages",
-    url: "/pages",
+    name: "Chef",
+    url: "/chef",
   },
   {
     id: 5,
