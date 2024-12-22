@@ -28,7 +28,7 @@ const Menus: React.FC<MenusProps> = ({ name, imageUrl, order, menus }) => {
       />
 
       <div
-        className={`col-span-12 md:col-span-6 lg:col-span-8 pb-6 order-2 ${
+        className={`col-span-12 md:col-span-6 lg:col-span-8 order-2 ${
           order === 1 ? "md:order-2" : "md:order-1"
         }`}
       >
