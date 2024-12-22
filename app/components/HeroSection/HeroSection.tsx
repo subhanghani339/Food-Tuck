@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { memo } from "react";
 
 interface HeroSectionProps {
@@ -14,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = memo(
       >
         <h1 className="text-3xl md:text-4xl font-bold"> {heading} </h1>
         <div className="flex">
-          <p>Home &gt;</p>
+          <Link href={"/"}>Home &gt;</Link>
           <p className="text-brand-500">&nbsp;{breadcrumb} </p>
         </div>
       </div>

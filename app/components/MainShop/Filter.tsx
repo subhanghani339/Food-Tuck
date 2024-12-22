@@ -11,9 +11,12 @@ interface FilterOptionsProps {
 interface FilterProps {
   name: string;
   filterOptions: FilterOptionsProps[];
+  value: string | number; // value passed down from the parent
+  onChange: (selectedOption: FilterOptionsProps) => void; // onChange callback
 }
 
-const Filter: React.FC<FilterProps> = ({ name, filterOptions }) => {
+const Filter: React.FC<FilterProps> = ({ name, filterOptions, value, onChange }) => {
+  
   const options = filterOptions.map((option) => ({
     label: option.name,
     value: option.value,
@@ -24,7 +27,12 @@ const Filter: React.FC<FilterProps> = ({ name, filterOptions }) => {
       <span className="text-grey-100"> {name} </span>
       <Select
         options={options}
-        defaultValue={options[0]}
+        value={options.find(option => option.value === value)} // Controlled value
+        onChange={(selectedOption) => {
+          if (selectedOption) {
+            onChange({ name: selectedOption.label, value: selectedOption.value });
+          }
+        }}
         components={{
           IndicatorSeparator: null,
         }}

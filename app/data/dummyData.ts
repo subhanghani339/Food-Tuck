@@ -435,6 +435,10 @@ export const ShowFilter = {
       value: 15,
     },
     {
+      name: 3,
+      value: 3,
+    },
+    {
       name: 6,
       value: 6,
     },
@@ -445,7 +449,7 @@ export const ShowFilter = {
     {
       name: 12,
       value: 12,
-    }
+    },
   ],
 };
 
