@@ -289,7 +289,7 @@ export const AllProducts = [
     originalPrice: 38,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/fresh-lime.svg',
+    featuredImage: "/images/shop/fresh-lime.svg",
   },
   {
     id: 2,
@@ -297,7 +297,7 @@ export const AllProducts = [
     originalPrice: 28,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/chocolate-muffin.svg',
+    featuredImage: "/images/shop/chocolate-muffin.svg",
   },
   {
     id: 3,
@@ -305,7 +305,7 @@ export const AllProducts = [
     originalPrice: 45,
     discountedPrice: 21,
     inStock: true,
-    featuredImage: '/images/shop/burger.svg',
+    featuredImage: "/images/shop/burger.svg",
   },
   {
     id: 4,
@@ -313,7 +313,7 @@ export const AllProducts = [
     originalPrice: 45,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/country-burger.svg',
+    featuredImage: "/images/shop/country-burger.svg",
   },
   {
     id: 5,
@@ -321,7 +321,7 @@ export const AllProducts = [
     originalPrice: 45,
     discountedPrice: 23,
     inStock: true,
-    featuredImage: '/images/shop/drink.svg',
+    featuredImage: "/images/shop/drink.svg",
   },
   {
     id: 6,
@@ -329,7 +329,7 @@ export const AllProducts = [
     originalPrice: 43,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/pizza.svg',
+    featuredImage: "/images/shop/pizza.svg",
   },
   {
     id: 7,
@@ -337,7 +337,7 @@ export const AllProducts = [
     originalPrice: 10,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/cheese-butter.svg',
+    featuredImage: "/images/shop/cheese-butter.svg",
   },
   {
     id: 8,
@@ -345,7 +345,7 @@ export const AllProducts = [
     originalPrice: 25,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/sandwiches.svg',
+    featuredImage: "/images/shop/sandwiches.svg",
   },
   {
     id: 9,
@@ -353,7 +353,7 @@ export const AllProducts = [
     originalPrice: 12,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/chicken-soup.svg',
+    featuredImage: "/images/shop/chicken-soup.svg",
   },
   {
     id: 10,
@@ -361,7 +361,7 @@ export const AllProducts = [
     originalPrice: 45,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/country-burger.svg',
+    featuredImage: "/images/shop/country-burger.svg",
   },
   {
     id: 11,
@@ -369,7 +369,7 @@ export const AllProducts = [
     originalPrice: 45,
     discountedPrice: 23,
     inStock: true,
-    featuredImage: '/images/shop/drink.svg',
+    featuredImage: "/images/shop/drink.svg",
   },
   {
     id: 12,
@@ -377,7 +377,7 @@ export const AllProducts = [
     originalPrice: 43,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/pizza.svg',
+    featuredImage: "/images/shop/pizza.svg",
   },
   {
     id: 13,
@@ -385,7 +385,7 @@ export const AllProducts = [
     originalPrice: 10,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/cheese-butter.svg',
+    featuredImage: "/images/shop/cheese-butter.svg",
   },
   {
     id: 14,
@@ -393,7 +393,7 @@ export const AllProducts = [
     originalPrice: 25,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/sandwiches.svg',
+    featuredImage: "/images/shop/sandwiches.svg",
   },
   {
     id: 15,
@@ -401,6 +401,50 @@ export const AllProducts = [
     originalPrice: 12,
     discountedPrice: null,
     inStock: true,
-    featuredImage: '/images/shop/country-burger.svg',
+    featuredImage: "/images/shop/country-burger.svg",
   },
 ];
+
+export const SortByFilter = {
+  name: "Sort By :",
+  filterOptions: [
+    {
+      name: "Oldest",
+      value: "Oldest",
+    },
+    {
+      name: "Newest",
+      value: "Newest",
+    },
+    {
+      name: "A To Z",
+      value: "A To Z",
+    },
+    {
+      name: "Z To A",
+      value: "Z To A",
+    },
+  ],
+};
+
+export const ShowFilter = {
+  name: "Show :",
+  filterOptions: [
+    {
+      name: 6,
+      value: 6,
+    },
+    {
+      name: 9,
+      value: 9,
+    },
+    {
+      name: 12,
+      value: 12,
+    },
+    {
+      name: 15,
+      value: 15,
+    },
+  ],
+};

@@ -1,16 +1,20 @@
 import React from "react";
-import ShowProduct from "./ShowProduct";
-import SortByProduct from "./SortByProduct";
-import { AllProducts } from "@/app/data/dummyData";
-import Image from "next/image";
+import Filter from "./Filter";
+import { AllProducts, SortByFilter, ShowFilter } from "@/app/data/dummyData";
 import ProductCard from "./ProductCard";
 
 const MainShop = () => {
   return (
     <div className="container py-16">
       <div className="flex gap-5">
-        <SortByProduct />
-        <ShowProduct />
+        <Filter
+          name={SortByFilter.name}
+          filterOptions={SortByFilter.filterOptions}
+        />
+        <Filter
+          name={ShowFilter.name}
+          filterOptions={ShowFilter.filterOptions}
+        />
       </div>
 
       <div className="grid grid-cols-12 gap-5 mt-5">
