@@ -188,7 +188,7 @@ export const StarterMenu = {
 
 export const MainCourse = {
   name: "Main Course",
-  imageUrl: "/images/menu/starter-menu.svg",
+  imageUrl: "/images/menu/main-course.svg",
   order: 2,
   menus: [
     {
@@ -220,7 +220,7 @@ export const MainCourse = {
 
 export const Dessert = {
   name: "Dessert",
-  imageUrl: "/images/menu/starter-menu.svg",
+  imageUrl: "/images/menu/dessert.svg",
   order: 1,
   menus: [
     {
@@ -252,7 +252,7 @@ export const Dessert = {
 
 export const Drinks = {
   name: "Drinks",
-  imageUrl: "/images/menu/starter-menu.svg",
+  imageUrl: "/images/menu/drinks.svg",
   order: 2,
   menus: [
     {
@@ -281,3 +281,126 @@ export const Drinks = {
     },
   ],
 };
+
+export const AllProducts = [
+  {
+    id: 1,
+    name: "Fresh Lime",
+    originalPrice: 38,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/fresh-lime.svg',
+  },
+  {
+    id: 2,
+    name: "Chocolate Muffin",
+    originalPrice: 28,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/chocolate-muffin.svg',
+  },
+  {
+    id: 3,
+    name: "Burger",
+    originalPrice: 45,
+    discountedPrice: 21,
+    inStock: true,
+    featuredImage: '/images/shop/burger.svg',
+  },
+  {
+    id: 4,
+    name: "Country Burger",
+    originalPrice: 45,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/country-burger.svg',
+  },
+  {
+    id: 5,
+    name: "Drink",
+    originalPrice: 45,
+    discountedPrice: 23,
+    inStock: true,
+    featuredImage: '/images/shop/drink.svg',
+  },
+  {
+    id: 6,
+    name: "Pizza",
+    originalPrice: 43,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/pizza.svg',
+  },
+  {
+    id: 7,
+    name: "Cheese Butter",
+    originalPrice: 10,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/cheese-butter.svg',
+  },
+  {
+    id: 8,
+    name: "Sandwiches",
+    originalPrice: 25,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/sandwiches.svg',
+  },
+  {
+    id: 9,
+    name: "Chicken Chup",
+    originalPrice: 12,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/chicken-soup.svg',
+  },
+  {
+    id: 10,
+    name: "Country Burger",
+    originalPrice: 45,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/country-burger.svg',
+  },
+  {
+    id: 11,
+    name: "Drink",
+    originalPrice: 45,
+    discountedPrice: 23,
+    inStock: true,
+    featuredImage: '/images/shop/drink.svg',
+  },
+  {
+    id: 12,
+    name: "Pizza",
+    originalPrice: 43,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/pizza.svg',
+  },
+  {
+    id: 13,
+    name: "Cheese Butter",
+    originalPrice: 10,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/cheese-butter.svg',
+  },
+  {
+    id: 14,
+    name: "Sandwiches",
+    originalPrice: 25,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/sandwiches.svg',
+  },
+  {
+    id: 15,
+    name: "Chicken Chup",
+    originalPrice: 12,
+    discountedPrice: null,
+    inStock: true,
+    featuredImage: '/images/shop/country-burger.svg',
+  },
+];

@@ -1,4 +1,5 @@
 import React from "react";
+import { PiCoffeeBold } from "react-icons/pi";
 
 interface SingleMenu {
   name: string;
@@ -15,18 +16,24 @@ interface MenusProps {
 }
 
 const Menus: React.FC<MenusProps> = ({ name, imageUrl, order, menus }) => {
-  
-
   return (
     <div className="container grid grid-cols-12 gap-0 md:gap-6 lg:gap-18 py-10">
       <div
-        className={`col-span-12 md:col-span-6 lg:col-span-4 min-h-[560px] md:min-h-80 bg-cover bg-bottom ${order === 1 ? "order-1": "order-2"}`}
+        className={`col-span-12 md:col-span-6 lg:col-span-4 min-h-[560px] md:min-h-80 bg-cover bg-bottom ${
+          order === 1 ? "order-1" : "order-2"
+        }`}
         style={{
           backgroundImage: `url(${imageUrl})`,
         }}
       />
 
-      <div className={`col-span-12 md:col-span-6 lg:col-span-8 py-6 ${order === 1 ? "order-2": "order-1"}`}>
+      <div
+        className={`col-span-12 md:col-span-6 lg:col-span-8 pb-6 ${
+          order === 1 ? "order-2" : "order-1"
+        }`}
+      >
+        <PiCoffeeBold size={20} fill="#FF9F0D" className="mb-3" />
+
         <h2 className="text-3xl font-bold text-grey-100">{name}</h2>
 
         {menus.map((data, index) => (
