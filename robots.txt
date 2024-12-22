@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /private/
 Allow: /
+Sitemap: https://ms-foodtuck.vercel.app/sitemap.xml
