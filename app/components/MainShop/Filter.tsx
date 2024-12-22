@@ -23,7 +23,7 @@ const Filter: React.FC<FilterProps> = ({ name, filterOptions, value, onChange })
   }));
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex flex-col md:flex-row md:items-center gap-3">
       <span className="text-grey-100"> {name} </span>
       <Select
         options={options}
@@ -33,6 +33,7 @@ const Filter: React.FC<FilterProps> = ({ name, filterOptions, value, onChange })
             onChange({ name: selectedOption.label, value: selectedOption.value });
           }
         }}
+        defaultValue={options[0]}
         components={{
           IndicatorSeparator: null,
         }}

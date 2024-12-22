@@ -24,7 +24,7 @@ const MainShop = () => {
   };
 
   return (
-    <div className="container py-16">
+    <div className="container py-10 md:py-16">
       <div className="flex gap-5">
         <Filter
           name={SortByFilter.name}
@@ -41,7 +41,7 @@ const MainShop = () => {
       </div>
 
       <div className="grid grid-cols-12 gap-5 mt-5">
-        <div className="col-span-10">
+        <div className="col-span-12 lg:col-span-10">
           <div className="grid grid-cols-12 gap-5">
             {AllProducts.slice(0,Number(show) || 15).map((product, index) => (
               <ProductCard
@@ -57,7 +57,7 @@ const MainShop = () => {
           </div>
         </div>
 
-        <div className="col-span-2"></div>
+        <div className="col-span-12 lg:col-span-2"></div>
       </div>
     </div>
   );
