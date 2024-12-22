@@ -448,3 +448,13 @@ export const ShowFilter = {
     },
   ],
 };
+
+// Partner Component inside Menu Page
+export const Partners = [
+  "/images/menu/partner-1.png",
+  "/images/menu/partner-2.png",
+  "/images/menu/partner-3.png",
+  "/images/menu/partner-4.png",
+  "/images/menu/partner-5.png",
+  "/images/menu/partner-6.png",
+];

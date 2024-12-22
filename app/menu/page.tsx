@@ -1,10 +1,11 @@
 import React from 'react'
-import HeaderDark from '../components/Header/HeaderDark'
-import HeroSection from '../components/HeroSection/HeroSection'
-import Footer from '../components/Footer/Footer'
-import Menus from '../components/Menus/Menus'
-import { StarterMenu, MainCourse, Dessert, Drinks } from '../data/dummyData'
-import Summary from '../components/Summary/Summary'
+import HeaderDark from '@/app/components/Header/HeaderDark'
+import HeroSection from '@/app/components/HeroSection/HeroSection'
+import Footer from '@/app/components/Footer/Footer'
+import Menus from '@/app/components/Menus/Menus'
+import { StarterMenu, MainCourse, Dessert, Drinks } from '@/app/data/dummyData'
+import Summary from '@/app/components/Summary/Summary'
+import Partners from '@/app/components/Partners/Partners'
 
 const page = () => {
   return (
@@ -36,7 +37,7 @@ const page = () => {
           order={Drinks.order}
           menus={Drinks.menus}
         />
-
+        <Partners />
         <Footer classes='bg-black-500 text-white' />
     </div>
   )
