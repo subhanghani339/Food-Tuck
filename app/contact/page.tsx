@@ -2,6 +2,11 @@ import React from 'react'
 import HeaderDark from '../components/Header/HeaderDark'
 import HeroSection from '../components/HeroSection/HeroSection'
 import Footer from '../components/Footer/Footer'
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us - Foodtuck",
+};
 
 const page = () => {
   return (

@@ -6,6 +6,11 @@ import Menus from '@/app/components/Menus/Menus'
 import { StarterMenu, MainCourse, Dessert, Drinks } from '@/app/data/dummyData'
 import Summary from '@/app/components/Summary/Summary'
 import Partners from '@/app/components/Partners/Partners'
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Menu - Foodtuck",
+};
 
 const page = () => {
   return (
