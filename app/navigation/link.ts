@@ -41,7 +41,7 @@ export const menus = [
 export const usefulLinks = [
   {
     name: "About",
-    src: "/",
+    src: "/about",
   },
   {
     name: "News",
@@ -57,11 +57,11 @@ export const usefulLinks = [
   },
   {
     name: "Menu",
-    src: "/",
+    src: "/menu",
   },
   {
     name: "Contact",
-    src: "/",
+    src: "/contact",
   },
 ];
 

@@ -409,12 +409,12 @@ export const SortByFilter = {
   name: "Sort By :",
   filterOptions: [
     {
-      name: "Oldest",
-      value: "Oldest",
-    },
-    {
       name: "Newest",
       value: "Newest",
+    },
+    {
+      name: "Oldest",
+      value: "Oldest",
     },
     {
       name: "A To Z",
@@ -431,6 +431,10 @@ export const ShowFilter = {
   name: "Show :",
   filterOptions: [
     {
+      name: "Default",
+      value: 15,
+    },
+    {
       name: 6,
       value: 6,
     },
@@ -441,11 +445,7 @@ export const ShowFilter = {
     {
       name: 12,
       value: 12,
-    },
-    {
-      name: 15,
-      value: 15,
-    },
+    }
   ],
 };
 
