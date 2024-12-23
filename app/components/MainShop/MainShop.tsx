@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Filter from "./Filter";
 import { AllProducts, SortByFilter, ShowFilter } from "@/app/data/dummyData";
 import ProductCard from "./ProductCard";
+import ShopSidebar from "./ShopSidebar";
 
 const MainShop = () => {
   const [sortBy, setSortBy] = useState<string | number>("");
@@ -40,7 +41,7 @@ const MainShop = () => {
         />
       </div>
 
-      <div className="grid grid-cols-12 gap-5 mt-5">
+      <div className="grid grid-cols-12 gap-3 mt-5">
         <div className="col-span-12 lg:col-span-10">
           <div className="grid grid-cols-12 gap-5">
             {AllProducts.slice(0,Number(show) || 15).map((product, index) => (
@@ -57,7 +58,9 @@ const MainShop = () => {
           </div>
         </div>
 
-        <div className="col-span-12 lg:col-span-2"></div>
+        <div className="col-span-12 lg:col-span-2">
+          <ShopSidebar />
+        </div>
       </div>
     </div>
   );

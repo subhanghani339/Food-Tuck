@@ -462,3 +462,47 @@ export const Partners = [
   "/images/menu/partner-5.png",
   "/images/menu/partner-6.png",
 ];
+
+// category listed on shop page
+export const category = [
+  {
+    id: 1,
+    label: "Sandwiches",
+    value: "Sandwiches",
+  },
+  {
+    id: 2,
+    label: "Burger",
+    value: "Burger",
+  },
+  {
+    id: 3,
+    label: "Chicken Chup",
+    value: "Chicken Chup",
+  },
+  {
+    id: 4,
+    label: "Drink",
+    value: "Drink",
+  },
+  {
+    id: 5,
+    label: "Pizza",
+    value: "Pizza",
+  },
+  {
+    id: 6,
+    label: "Thi",
+    value: "Thi",
+  },
+  {
+    id: 7,
+    label: "Non Veg",
+    value: "Non Veg",
+  },
+  {
+    id: 8,
+    label: "Uncategorized",
+    value: "Uncategorized",
+  },
+]

@@ -1,7 +1,8 @@
-"use client";
-
 import React from "react";
-import Select from "react-select";
+import { SingleValue, ActionMeta } from "react-select";
+import dynamic from "next/dynamic";
+
+const Select = dynamic(() => import("react-select"), { ssr: false });
 
 interface FilterOptionsProps {
   name: string | number;
@@ -11,12 +12,11 @@ interface FilterOptionsProps {
 interface FilterProps {
   name: string;
   filterOptions: FilterOptionsProps[];
-  value: string | number; // value passed down from the parent
-  onChange: (selectedOption: FilterOptionsProps) => void; // onChange callback
+  value: string | number;
+  onChange: (selectedOption: FilterOptionsProps) => void;
 }
 
 const Filter: React.FC<FilterProps> = ({ name, filterOptions, value, onChange }) => {
-  
   const options = filterOptions.map((option) => ({
     label: option.name,
     value: option.value,
@@ -27,13 +27,13 @@ const Filter: React.FC<FilterProps> = ({ name, filterOptions, value, onChange })
       <span className="text-grey-100"> {name} </span>
       <Select
         options={options}
-        value={options.find(option => option.value === value)} // Controlled value
-        onChange={(selectedOption) => {
+        value={options.find((option) => option.value === value) || null} // Controlled value
+        onChange={(newValue: unknown, actionMeta: ActionMeta<unknown>) => {
+          const selectedOption = newValue as SingleValue<{ label: string; value: string | number }>;
           if (selectedOption) {
             onChange({ name: selectedOption.label, value: selectedOption.value });
           }
         }}
-        defaultValue={options[0]}
         components={{
           IndicatorSeparator: null,
         }}
@@ -49,7 +49,7 @@ const Filter: React.FC<FilterProps> = ({ name, filterOptions, value, onChange })
           }),
           option: (provided, state) => ({
             ...provided,
-            backgroundColor: state.isSelected ? '#FFBE5a' : provided.backgroundColor,
+            backgroundColor: state.isSelected ? "#FFBE5a" : provided.backgroundColor,
             ":hover": {
               background: "orange",
               color: "white",
