@@ -2,6 +2,7 @@ import { category } from '@/app/data/dummyData';
 import React from 'react'
 import { CiSearch } from "react-icons/ci";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import PriceRangeFilter from './PriceRangeFilter';
 
 const ShopSidebar = () => {
     return (
@@ -30,7 +31,6 @@ const ShopSidebar = () => {
             </div>
 
             {/* banner */}
-
             <div className='bg-[url("/images/banner/banner-2.svg")] bg-cover bg-center text-white py-6 px-4'>
                 <p className='font-bold'>Perfect Taste</p>
                 <h5 className='font-bold'>Classic Restaurant</h5>
@@ -40,6 +40,12 @@ const ShopSidebar = () => {
                     Shop Now
                     <FaRegArrowAltCircleRight />
                 </button>
+            </div>
+
+            {/* Filter By Price */}
+            <div>
+                <h2 className="text-grey-100 text-lg font-bold mt-6 mb-4">Filter by Price</h2>
+                <PriceRangeFilter />
             </div>
         </div>
     )
