@@ -18,7 +18,7 @@ const ProductImages = () => {
         <div className='flex flex-col-reverse md:flex-row gap-5'>
             <div className='flex flex-row md:flex-col gap-2'>
                 {productImages.filter((img) => img !== selectedImage).map((image, index) => (
-                    <div key={index} className='relative w-[132] h-[132]'>
+                    <div key={index} className='relative w-[132px] h-[132px]'>
                         <Image
                             src={image}
                             alt='product images'
@@ -35,7 +35,7 @@ const ProductImages = () => {
                 ))}
             </div>
 
-            <div className='relative w-[100%] h-[400] md:h-[553]'>
+            <div className='relative w-[100%] h-[400px] md:h-[553px]'>
                 <Image
                     src={selectedImage}
                     alt='product images'
