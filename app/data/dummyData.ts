@@ -286,6 +286,7 @@ export const AllProducts = [
   {
     id: 1,
     name: "Fresh Lime",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 38,
     discountedPrice: null,
     inStock: true,
@@ -294,6 +295,7 @@ export const AllProducts = [
   {
     id: 2,
     name: "Chocolate Muffin",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 28,
     discountedPrice: null,
     inStock: true,
@@ -302,6 +304,7 @@ export const AllProducts = [
   {
     id: 3,
     name: "Burger",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 45,
     discountedPrice: 21,
     inStock: true,
@@ -310,6 +313,7 @@ export const AllProducts = [
   {
     id: 4,
     name: "Country Burger",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 45,
     discountedPrice: null,
     inStock: true,
@@ -318,6 +322,7 @@ export const AllProducts = [
   {
     id: 5,
     name: "Drink",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 45,
     discountedPrice: 23,
     inStock: true,
@@ -326,6 +331,7 @@ export const AllProducts = [
   {
     id: 6,
     name: "Pizza",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 43,
     discountedPrice: null,
     inStock: true,
@@ -334,6 +340,7 @@ export const AllProducts = [
   {
     id: 7,
     name: "Cheese Butter",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 10,
     discountedPrice: null,
     inStock: true,
@@ -342,6 +349,7 @@ export const AllProducts = [
   {
     id: 8,
     name: "Sandwiches",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 25,
     discountedPrice: null,
     inStock: true,
@@ -350,6 +358,7 @@ export const AllProducts = [
   {
     id: 9,
     name: "Chicken Chup",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 12,
     discountedPrice: null,
     inStock: true,
@@ -358,6 +367,7 @@ export const AllProducts = [
   {
     id: 10,
     name: "Country Burger",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 45,
     discountedPrice: null,
     inStock: true,
@@ -366,6 +376,7 @@ export const AllProducts = [
   {
     id: 11,
     name: "Drink",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 45,
     discountedPrice: 23,
     inStock: true,
@@ -374,6 +385,7 @@ export const AllProducts = [
   {
     id: 12,
     name: "Pizza",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 43,
     discountedPrice: null,
     inStock: true,
@@ -382,6 +394,7 @@ export const AllProducts = [
   {
     id: 13,
     name: "Cheese Butter",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 10,
     discountedPrice: null,
     inStock: true,
@@ -390,6 +403,7 @@ export const AllProducts = [
   {
     id: 14,
     name: "Sandwiches",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 25,
     discountedPrice: null,
     inStock: true,
@@ -398,6 +412,7 @@ export const AllProducts = [
   {
     id: 15,
     name: "Chicken Chup",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
     originalPrice: 12,
     discountedPrice: null,
     inStock: true,
