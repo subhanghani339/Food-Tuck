@@ -26,7 +26,7 @@ const HeaderDark = () => {
             priority
             style={{ cursor: "pointer" }}
           />
-          <Link href={"/login"}>
+          <Link href={"/signin"}>
             <Image
               src="/icons/User.svg"
               alt="user icon"

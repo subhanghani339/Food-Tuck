@@ -13,7 +13,7 @@ const page = () => {
   return (
     <div>
       <HeaderDark />
-      <HeroSection heading="Login Page" breadcrumb="Login" />
+      <HeroSection heading="Sign In Page" breadcrumb="Sign In" />
       <LoginForm />
       <Footer classes="bg-black-500 text-white" />
     </div>
