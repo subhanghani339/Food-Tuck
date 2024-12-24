@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Range } from "react-range";
 
 const PriceRangeFilter: React.FC = () => {
-    const [values, setValues] = useState<number[]>([100, 500]);
+    const [values, setValues] = useState<number[]>([100, 5000]);
 
     const STEP = 10;
     const MIN = 0;
@@ -34,21 +34,25 @@ const PriceRangeFilter: React.FC = () => {
                         {children}
                     </div>
                 )}
-                renderThumb={({ props, index }: { props: any; index: number }) => (
-                    <div
-                        key={index}
-                        {...props}
-                        style={{
-                            ...props.style,
-                            height: "16px",
-                            width: "16px",
-                            borderRadius: "50%",
-                            backgroundColor: "white",
-                            border: "2px solid orange",
-                        }}
-                    />
-                )}
-
+                renderThumb={({ props, index }: { props: any; index: number }) => {
+                    // Destructure 'key' from props
+                    const { key, ...restProps } = props;
+                    return (
+                        <div
+                            // Directly use 'key' prop, no need to spread
+                            key={key}
+                            {...restProps}
+                            style={{
+                                ...restProps.style,
+                                height: "16px",
+                                width: "16px",
+                                borderRadius: "50%",
+                                backgroundColor: "white",
+                                border: "2px solid orange",
+                            }}
+                        />
+                    );
+                }}
             />
 
             {/* Display Selected Price Range */}

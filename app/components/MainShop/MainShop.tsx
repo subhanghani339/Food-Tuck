@@ -42,7 +42,7 @@ const MainShop = () => {
       </div>
 
       <div className="grid grid-cols-12 gap-3 mt-5">
-        <div className="col-span-12 lg:col-span-10">
+        <div className="col-span-12 lg:col-span-9">
           <div className="grid grid-cols-12 gap-5">
             {AllProducts.slice(0,Number(show) || 15).map((product, index) => (
               <ProductCard
@@ -58,7 +58,7 @@ const MainShop = () => {
           </div>
         </div>
 
-        <div className="col-span-12 lg:col-span-2">
+        <div className="col-span-12 lg:col-span-3">
           <ShopSidebar />
         </div>
       </div>
