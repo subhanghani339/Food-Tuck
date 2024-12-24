@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import MainMenu from "../MainMenu/MainMenu";
+import Link from "next/link";
 
 const Header = () => {
-  
   return (
     <div className="container">
       {/* brand name */}
@@ -35,13 +35,15 @@ const Header = () => {
               style={{ cursor: "pointer" }}
             />
           </div>
-          <Image
-            src="/icons/Handbag.svg"
-            alt="handbag icon"
-            width={24}
-            height={42}
-            style={{ cursor: "pointer" }}
-          />
+          <Link href={"/cart"}>
+            <Image
+              src="/icons/Handbag.svg"
+              alt="cart icon"
+              width={24}
+              height={42}
+              className="mt-2"
+            />
+          </Link>
         </div>
       </div>
     </div>

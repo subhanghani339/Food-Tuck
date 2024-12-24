@@ -61,6 +61,9 @@ export default {
         24: "96px",
         30: "120px",
       },
+      boxShadow: {
+        loginShadow: "0 4px 80px #ff9d0026",
+      },
     },
   },
   plugins: [],

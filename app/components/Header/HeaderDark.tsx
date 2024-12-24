@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import MainMenu from "../MainMenu/MainMenu";
+import Link from "next/link";
 
 const HeaderDark = () => {
-  
   return (
     <div className="bg-black-500 py-8">
       <div className="container flex justify-between items-center">
@@ -26,20 +26,22 @@ const HeaderDark = () => {
             priority
             style={{ cursor: "pointer" }}
           />
-          <Image
-            src="/icons/User.svg"
-            alt="user icon"
-            width={24}
-            height={42}
-            style={{ cursor: "pointer" }}
-          />
-          <Image
-            src="/icons/Handbag.svg"
-            alt="handbag icon"
-            width={24}
-            height={42}
-            style={{ cursor: "pointer" }}
-          />
+          <Link href={"/login"}>
+            <Image
+              src="/icons/User.svg"
+              alt="user icon"
+              width={24}
+              height={42}
+            />
+          </Link>
+          <Link href={"/cart"}>
+            <Image
+              src="/icons/Handbag.svg"
+              alt="cart icon"
+              width={24}
+              height={42}
+            />
+          </Link>
         </div>
       </div>
     </div>
