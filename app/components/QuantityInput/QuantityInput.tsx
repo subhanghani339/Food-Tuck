@@ -14,7 +14,7 @@ const QuantityInput = () => {
   }, []);
 
   return (
-    <div className="border border-grey-300 max-w-32 flex justify-between">
+    <div className="border border-grey-300 max-w-32 w-full flex justify-between">
       <button
         onClick={decrement}
         disabled={quantity === 0 ? true : false}

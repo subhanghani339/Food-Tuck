@@ -4,8 +4,11 @@ import { AllProducts } from "@/app/data/dummyData";
 import { useParams } from "next/navigation";
 import React from "react";
 import StarRatings from "../StarRatings/StarRatings";
-import FTInput from "../FTInput/FTInput";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 import QuantityInput from "../QuantityInput/QuantityInput";
+import SolidButton from "../Buttons/SolidButton";
+import { CiHeart } from "react-icons/ci";
+import { IoIosGitCompare } from "react-icons/io";
 
 const ProductInfo = () => {
   const params = useParams();
@@ -68,16 +71,48 @@ const ProductInfo = () => {
       {/* Ratings */}
       <div className="mt-4 flex gap-3 items-center text-grey-300">
         <StarRatings ratings={averageRatings} /> |
-        <p>{averageRatings.toFixed(1)} Ratings</p> |
-        <p>{totalRatings} Reviews</p>
+        <p>{averageRatings.toFixed(1)} Rating</p> |<p>{totalRatings} Reviews</p>
       </div>
 
       <p className="text-grey-100 my-4">Dictum/cursus/Risus</p>
 
       {/* quantity input */}
-      <div>
+      <div className="flex gap-3">
         <QuantityInput />
+        <SolidButton
+          text="Add to cart"
+          Icon={HiOutlineShoppingBag}
+          className="flex gap-2 items-center text-white hover:opacity-85 transition-opacity duration-300"
+        />
       </div>
+
+      {/* Divider */}
+      <hr className="border border-1 border-grey-500 my-6" />
+
+      {/* Add To Wishlist and Compare Button */}
+      <div className="flex gap-4">
+        <SolidButton
+          text="Add to Wishlist"
+          Icon={CiHeart}
+          className="flex gap-2 items-center bg-transparent px-0 py-0 text-grey-200"
+        />
+        <SolidButton
+          text="Compare"
+          Icon={IoIosGitCompare}
+          className="flex gap-2 items-center bg-transparent px-0 py-0 text-grey-200"
+        />
+      </div>
+
+      <p>
+        <span className="text-grey-100">Category: </span>
+        <span className="text-grey-200">Pizza </span>
+      </p>
+      <p>
+        <span className="text-grey-100">Tag: </span>
+        <span className="text-grey-200">Our Shop </span>
+      </p>
+
+      <hr className="border border-1 border-grey-500 my-6" />
     </div>
   );
 };
