@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import StarRatings from "../StarRatings/StarRatings";
 
 interface LatestProductCardProps {
   id: number;
@@ -39,13 +40,7 @@ const LatestProductCard: React.FC<LatestProductCardProps> = ({
       </div>
       <div className="flex flex-col justify-between text-grey-200">
         <h5>{name}</h5>
-        <div className="flex gap-1">
-          {Array(5)
-            .fill(null)
-            .map((__, i) => (
-              <FaStar key={i} fill={i < ratings ? "orange" : "#E0E0E0"} />
-            ))}
-        </div>
+        <StarRatings ratings={ratings} />
         <h6>${originalPrice.toFixed(2)}</h6>
       </div>
     </div>

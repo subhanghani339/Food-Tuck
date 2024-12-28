@@ -1,64 +1,85 @@
 "use client";
 
-import { AllProducts } from '@/app/data/dummyData';
-import { useParams } from 'next/navigation';
-import React from 'react';
+import { AllProducts } from "@/app/data/dummyData";
+import { useParams } from "next/navigation";
+import React from "react";
+import StarRatings from "../StarRatings/StarRatings";
+import FTInput from "../FTInput/FTInput";
+import QuantityInput from "../QuantityInput/QuantityInput";
 
 const ProductInfo = () => {
-    const params = useParams();
+  const params = useParams();
 
-    // Find the current product
-    const currentProduct = AllProducts.find(prod => prod.id === Number(params.id));
+  // Find the current product
+  const currentProduct = AllProducts.find(
+    (prod) => prod.id === Number(params.id)
+  );
 
-    // Handle case where product is not found
-    if (!currentProduct) {
-        return <p className="text-error">Product not found.</p>;
-    }
+  // Handle case where product is not found
+  if (!currentProduct) {
+    return <p className="text-error">Product not found.</p>;
+  }
 
-    // Destructure product properties for easier access
-    const {
-        inStock,
-        name,
-        shortDescription,
-        discountedPrice,
-        originalPrice,
-    } = currentProduct;
+  // Destructure product properties for easier access
+  const {
+    inStock,
+    name,
+    shortDescription,
+    discountedPrice,
+    originalPrice,
+    averageRatings,
+    totalRatings,
+  } = currentProduct;
 
-    return (
-        <div>
-            {/* Stock Status */}
-            <p
-                className={`py-1 px-5 w-max rounded-lg text-white 
+  return (
+    <div>
+      {/* Stock Status */}
+      <p
+        className={`py-1 px-5 w-max rounded-lg text-white 
                     ${inStock ? "bg-brand-500" : "bg-error"}`}
-            >
-                {inStock ? "In stock" : "Out of stock"}
-            </p>
+      >
+        {inStock ? "In stock" : "Out of stock"}
+      </p>
 
-            {/* Product Name */}
-            <h2 className="text-4xl font-bold text-grey-100 mt-3 mb-6">{name}</h2>
+      {/* Product Name */}
+      <h2 className="text-4xl font-bold text-grey-100 mt-3 mb-6">{name}</h2>
 
-            {/* Short Description */}
-            <p className="text-grey-200">{shortDescription}</p>
+      {/* Short Description */}
+      <p className="text-grey-200">{shortDescription}</p>
 
-            {/* Divider */}
-            <hr className="border border-1 border-grey-500 my-6" />
+      {/* Divider */}
+      <hr className="border border-1 border-grey-500 my-6" />
 
-            {/* Pricing */}
-            <div className="flex items-center gap-2">
-                {discountedPrice && (
-                    <span className="font-bold text-3xl text-brand-500 helvetica">
-                        ${discountedPrice.toFixed(2)}
-                    </span>
-                )}
-                <span
-                    className={`font-bold text-3xl helvetica text-grey-100
+      {/* Pricing */}
+      <div className="flex items-center gap-2">
+        {discountedPrice && (
+          <span className="font-bold text-2xl text-brand-500 helvetica">
+            ${discountedPrice.toFixed(2)}
+          </span>
+        )}
+        <span
+          className={`font-bold text-2xl helvetica text-grey-100
                         ${discountedPrice ? "line-through" : ""}`}
-                >
-                    ${originalPrice.toFixed(2)}
-                </span>
-            </div>
-        </div>
-    );
+        >
+          ${originalPrice.toFixed(2)}
+        </span>
+      </div>
+
+      {/* Ratings */}
+      <div className="mt-4 flex gap-3 items-center text-grey-300">
+        <StarRatings ratings={averageRatings} /> |
+        <p>{averageRatings.toFixed(1)} Ratings</p> |
+        <p>{totalRatings} Reviews</p>
+      </div>
+
+      <p className="text-grey-100 my-4">Dictum/cursus/Risus</p>
+
+      {/* quantity input */}
+      <div>
+        <QuantityInput />
+      </div>
+    </div>
+  );
 };
 
 export default ProductInfo;

@@ -293,6 +293,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/fresh-lime.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
   {
@@ -305,6 +306,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/chocolate-muffin.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
   {
@@ -317,6 +319,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/burger.svg",
     averageRatings: 1,
+    totalRatings: 22,
     latest: true,
   },
   {
@@ -329,6 +332,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/country-burger.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
   {
@@ -341,6 +345,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/drink.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
   {
@@ -353,6 +358,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/pizza.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: true,
   },
   {
@@ -365,6 +371,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/cheese-butter.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
   {
@@ -377,6 +384,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/sandwiches.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
   {
@@ -389,6 +397,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/chicken-soup.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
   {
@@ -401,6 +410,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/country-burger.svg",
     averageRatings: 3,
+    totalRatings: 22,
     latest: true,
   },
   {
@@ -413,6 +423,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/drink.svg",
     averageRatings: 4,
+    totalRatings: 22,
     latest: true,
   },
   {
@@ -425,6 +436,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/pizza.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
   {
@@ -437,6 +449,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/cheese-butter.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
   {
@@ -449,6 +462,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/sandwiches.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
   {
@@ -461,6 +475,7 @@ export const AllProducts = [
     inStock: true,
     featuredImage: "/images/shop/country-burger.svg",
     averageRatings: 2,
+    totalRatings: 22,
     latest: false,
   },
 ];
@@ -567,6 +582,7 @@ export const category = [
   },
 ];
 
+// product tags listed on shop page
 export const ProductTags = [
   {
     id: 1,
