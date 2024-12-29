@@ -38,7 +38,7 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
 
         <SolidButton text={heading} className="text-white rounded-0" />
 
-        {isSignUp && (
+        {!isSignUp && (
           <div className="text-grey-300 flex justify-between text-xs">
             <Link href="/signup">Sign Up Here!</Link>
             <Link href="/signup">Forgot Password?</Link>
