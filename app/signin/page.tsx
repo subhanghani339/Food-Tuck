@@ -1,12 +1,12 @@
 import React from "react";
-import HeaderDark from "../components/Header/HeaderDark";
-import HeroSection from "../components/HeroSection/HeroSection";
-import Footer from "../components/Footer/Footer";
+import HeaderDark from "@/app/components/Header/HeaderDark";
+import HeroSection from "@/app/components/HeroSection/HeroSection";
+import Footer from "@/app/components/Footer/Footer";
 import { Metadata } from "next";
-import LoginForm from "../components/LoginForm/LoginForm";
+import LoginRegister from "@/app/components/LoginRegister/LoginRegister";
 
 export const metadata: Metadata = {
-  title: "About Us - Foodtuck",
+  title: "Sign In - Foodtuck",
 };
 
 const page = () => {
@@ -14,7 +14,7 @@ const page = () => {
     <div>
       <HeaderDark />
       <HeroSection heading="Sign In Page" breadcrumb="Sign In" />
-      <LoginForm />
+      <LoginRegister />
       <Footer classes="bg-black-500 text-white" />
     </div>
   );
