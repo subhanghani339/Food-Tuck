@@ -43,14 +43,17 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <CiHeart
             fontSize={30}
             className="bg-white hover:bg-brand-500 transition-colors duration-300 p-2 rounded-sm text-brand-500 hover:text-white"
+            onClick={(e) => e.preventDefault()}
           />
           <CiShoppingCart
             fontSize={30}
             className="bg-white hover:bg-brand-500 transition-colors duration-300 p-2 rounded-sm text-brand-500 hover:text-white"
+            onClick={(e) => e.preventDefault()}
           />
           <IoIosGitCompare
             fontSize={30}
             className="bg-white hover:bg-brand-500 transition-colors duration-300 p-2 rounded-sm text-brand-500 hover:text-white"
+            onClick={(e) => e.preventDefault()}
           />
         </div>
       </div>

@@ -9,6 +9,10 @@ import QuantityInput from "../QuantityInput/QuantityInput";
 import SolidButton from "../Buttons/SolidButton";
 import { CiHeart } from "react-icons/ci";
 import { IoIosGitCompare } from "react-icons/io";
+import { MdOutlineFacebook, MdOutlineYoutubeSearchedFor } from "react-icons/md";
+import { PiYoutubeLogoThin } from "react-icons/pi";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import Image from "next/image";
 
 const ProductInfo = () => {
   const params = useParams();
@@ -33,6 +37,14 @@ const ProductInfo = () => {
     averageRatings,
     totalRatings,
   } = currentProduct;
+
+  const socialSharesIcons = [
+    "/icons/product-youtube.svg",
+    "/icons/product-facebook.svg",
+    "/icons/product-twitter.svg",
+    "/icons/product-vk.svg",
+    "/icons/product-instagram.svg",
+  ];
 
   return (
     <div>
@@ -111,6 +123,22 @@ const ProductInfo = () => {
         <span className="text-grey-100">Tag: </span>
         <span className="text-grey-200">Our Shop </span>
       </p>
+
+      {/* Social Media Share Button */}
+      <div className="flex gap-2 mt-6">
+        <span className="text-grey-100">Share: </span>
+        {socialSharesIcons.map((icons, index) => (
+          <Image
+            key={index}
+            alt="social media icons"
+            src={icons}
+            width={24}
+            height={24}
+            priority
+            className="cursor-pointer"
+          />
+        ))}
+      </div>
 
       <hr className="border border-1 border-grey-500 my-6" />
     </div>
