@@ -26,7 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const [showIcon, setShowIcons] = useState(false);
   return (
     <Link
-      href={`shop-details/${id}`}
+      href={`/shop-details/${id}`}
       className="col-span-12 md:col-span-6 lg:col-span-4"
     >
       <div
