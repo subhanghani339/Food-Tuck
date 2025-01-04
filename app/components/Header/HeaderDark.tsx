@@ -2,16 +2,14 @@ import React from "react";
 import Image from "next/image";
 import MainMenu from "../MainMenu/MainMenu";
 import Link from "next/link";
+import BrandName from "./BrandName";
 
 const HeaderDark = () => {
   return (
     <div className="bg-black-500 py-8">
       <div className="container flex justify-between items-center">
         {/* brand name */}
-        <h1 className="text-center text-brand-500 text-2xl">
-          Food
-          <span className="text-white">tuck</span>
-        </h1>
+        <BrandName />
 
         {/* Menu  */}
         <MainMenu />

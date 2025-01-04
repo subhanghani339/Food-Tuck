@@ -2,15 +2,15 @@ import React from "react";
 import Image from "next/image";
 import MainMenu from "../MainMenu/MainMenu";
 import Link from "next/link";
+import BrandName from "./BrandName";
 
 const Header = () => {
   return (
     <div className="container">
       {/* brand name */}
-      <h1 className="text-center text-brand-500 text-2xl mb-4 md:mb-2">
-        Food
-        <span className="text-white">tuck</span>
-      </h1>
+      <div className="mb-4 md:mb-2 w-full text-center">
+        <BrandName />
+      </div>
 
       <div className="flex justify-between items-center">
         {/* Menu  */}
