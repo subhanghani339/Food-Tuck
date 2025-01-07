@@ -1,7 +1,7 @@
 import React from "react";
 
 interface FTInputProps {
-  Icon: React.ComponentType<{ fontSize: number }>;
+  Icon?: React.ComponentType<{ fontSize: number }>;
   type: string;
   name: string;
   placeholder: string;
@@ -17,7 +17,7 @@ const FTInput: React.FC<FTInputProps> = ({
 }) => {
   return (
     <div className="flex items-center gap-2 border border-grey-500 p-2">
-      <Icon fontSize={20} />
+      {Icon && <Icon fontSize={20} />}
       <input
         type={type}
         name={name}
