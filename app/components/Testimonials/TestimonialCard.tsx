@@ -7,6 +7,7 @@ interface TestimonialCardProps {
   name: string;
   designation: string;
   feedback: string;
+  hasBoxShadow?: boolean;
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
@@ -14,10 +15,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   name,
   designation,
   feedback,
+  hasBoxShadow = false,
 }) => {
   return (
-    <div className="p-6">
-      <div className="half-white-transparent-bg">
+    <div className="p-6 relative pt-16">
+      <div className="absolute top-0 left-0 right-0">
         <Image
           src={image}
           alt="client face"
@@ -27,14 +29,18 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           className="mx-auto"
         />
       </div>
-      <div className="bg-white py-8 px-16">
+      <div
+        className={`bg-white py-8 px-16 ${
+          hasBoxShadow ? "shadow-testimonialShadow" : null
+        } `}
+      >
         <Image
           src={"/images/home/quotes.svg"}
           alt="quotation mark"
           width={48}
           height={48}
           priority
-          className="mx-auto"
+          className="mx-auto mt-16"
         />
 
         <h6 className="text-center text-grey-200">{feedback}</h6>

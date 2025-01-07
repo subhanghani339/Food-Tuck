@@ -63,6 +63,7 @@ export default {
       },
       boxShadow: {
         loginShadow: "0 4px 80px #ff9d0026",
+        testimonialShadow: "0 0 40px 0 hsl(0deg 0% 80% / 25%)",
       },
     },
   },
