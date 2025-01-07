@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import QualityCard from "./QualityCard";
+import { qualities } from "@/app/data/dummyData";
 
 const WhyChoose = () => {
   return (
@@ -20,6 +22,17 @@ const WhyChoose = () => {
         priority
         className="mt-10"
       />
+
+      <div className="container flex gap-5 mt-8 flex-col md:flex-row">
+        {qualities.map((quality, index) => (
+          <QualityCard
+            key={index}
+            image={quality.icon}
+            title={quality.name}
+            para={quality.decription}
+          />
+        ))}
+      </div>
     </div>
   );
 };

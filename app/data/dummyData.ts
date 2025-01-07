@@ -625,3 +625,27 @@ export const ProductTags = [
     value: "Tandoori Chicken",
   },
 ];
+
+export const qualities = [
+  {
+    id: 1,
+    name: "Best Chef",
+    icon: "/images/about/Student.svg",
+    decription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat ",
+  },
+  {
+    id: 2,
+    name: "120 Item Food",
+    icon: "/images/about/Coffee.svg",
+    decription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat ",
+  },
+  {
+    id: 3,
+    name: "Clean Environment",
+    icon: "/images/about/Person.svg",
+    decription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat ",
+  },
+];
