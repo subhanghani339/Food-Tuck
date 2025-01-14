@@ -44,16 +44,12 @@ export const usefulLinks = [
     src: "/about",
   },
   {
-    name: "News",
-    src: "/",
-  },
-  {
     name: "Partners",
     src: "/",
   },
   {
-    name: "Team",
-    src: "/",
+    name: "Chef",
+    src: "/chef",
   },
   {
     name: "Menu",
@@ -77,10 +73,6 @@ export const helpLinks = [
   },
   {
     name: "Reporting",
-    src: "/",
-  },
-  {
-    name: "Documentation",
     src: "/",
   },
   {
