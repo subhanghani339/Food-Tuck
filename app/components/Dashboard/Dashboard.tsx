@@ -6,7 +6,7 @@ import React from "react";
 const Dashboard = () => {
   const { data: session } = useSession();
   return (
-    <div className="flex justify-center items-center font-bold min-h-80 ">
+    <div className="flex flex-col gap-4 justify-center items-center font-bold min-h-80 ">
       <p>Welcome, {session?.user?.name}!</p>
       <p>Email: {session?.user?.email}</p>
       <button
