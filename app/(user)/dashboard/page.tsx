@@ -1,3 +1,4 @@
+import Dashboard from "@/app/components/Dashboard/Dashboard";
 import Footer from "@/app/components/Footer/Footer";
 import HeaderDark from "@/app/components/Header/HeaderDark";
 import { Metadata } from "next";
@@ -11,7 +12,7 @@ const page = () => {
   return (
     <div>
       <HeaderDark />
-      <div className="flex justify-center items-center font-bold min-h-80 ">This is a dashboard for user</div>
+      <Dashboard />
       <Footer classes="bg-black-500 text-white" />
     </div>
   );
