@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Great_Vibes } from "next/font/google";
 import "./globals.css";
+import SessionProviderWrapper from "./components/SessionProvider/SessionProviderWrapper";
 
 const greatVibes = Great_Vibes({
   variable: "--font-great-vibes",
@@ -28,9 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
+        <SessionProviderWrapper>
+
         {children}
 
         <div className="bg-black-500 text-white text-center">Developed By Muhammad Subhan</div>
+        </SessionProviderWrapper>
       </body>
     </html>
   );

@@ -7,7 +7,7 @@ import SolidButton from "../Buttons/SolidButton";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { GrApple } from "react-icons/gr";
-import { signIn } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 interface LoginRegisterProps {
   heading?: string;
@@ -18,6 +18,9 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
   heading = "Sign In",
   isSignUp = false,
 }) => {
+
+  const { data: session } = useSession(); // Get the session data
+
   return (
     <div className="container my-20 max-w-sm p-5 shadow-loginShadow">
       <h2 className="text-grey-100 text-md font-bold mb-5">{heading}</h2>
@@ -66,6 +69,15 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
           <GrApple fontSize={20} />
           <span className="w-full"> Sign Up with Apple </span>
         </button>
+
+        {session &&
+          <div>
+            <p>Welcome, {session?.user?.name}!</p>
+            <p>Email: {session?.user?.email}</p>
+            <button onClick={() => signOut()} className="mt-4 p-2 bg-blue-500 text-white rounded">
+              Sign Out
+            </button>
+          </div>}
       </div>
     </div>
   );
