@@ -6,7 +6,6 @@ import { getToken } from "next-auth/jwt"; // getToken to access NextAuth session
 const restrictedPaths = ["/signin", "/signup"];
 
 export async function middleware(req: NextRequest) {
-  console.log("Middleware accessed:", req.nextUrl.pathname);
 
   // Get the user session token
   const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
@@ -17,7 +16,7 @@ export async function middleware(req: NextRequest) {
     restrictedPaths.some((path) => req.nextUrl.pathname.startsWith(path))
   ) {
     // Redirect the user to the dashboard or home page (can be customized)
-    return NextResponse.redirect(new URL("/dashboard", req.url));
+    return NextResponse.redirect(new URL("/", req.url));
   }
 
   // If the user is not authenticated or not trying to access restricted pages, allow the request
