@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import { CiMail, CiLock, CiUser } from "react-icons/ci";
 import FTInput from "@/app/components/FTInput/FTInput";
@@ -5,6 +7,7 @@ import SolidButton from "../Buttons/SolidButton";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { GrApple } from "react-icons/gr";
+import { signIn } from "next-auth/react";
 
 interface LoginRegisterProps {
   heading?: string;
@@ -51,7 +54,10 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
           <hr className="flex-grow border-t" />
         </div>
 
-        <button className="flex items-center border border-grey-500 px-4 py-2 helvetica text-grey-200">
+        <button 
+        className="flex items-center border border-grey-500 px-4 py-2 helvetica text-grey-200"
+        onClick={() => signIn("google")}
+        >
           <FcGoogle fontSize={20} />
           <span className="w-full"> Sign Up with Google </span>
         </button>
