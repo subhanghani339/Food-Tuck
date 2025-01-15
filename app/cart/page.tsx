@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer'
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us - Foodtuck",
+  title: "Cart - Foodtuck",
 };
 
 const page = () => {
