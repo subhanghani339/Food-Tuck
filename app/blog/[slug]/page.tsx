@@ -1,6 +1,6 @@
 import React from "react";
-import { Metadata } from "next";
-import { allBlogs } from "@/app/data/dummyData"; // Assuming this is where your data comes from
+import type { Metadata, ResolvingMetadata } from 'next'
+import { allBlogs } from "@/app/data/dummyData";
 import HeaderDark from "@/app/components/Header/HeaderDark";
 import HeroSection from "@/app/components/HeroSection/HeroSection";
 import Footer from "@/app/components/Footer/Footer";
@@ -9,6 +9,7 @@ export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
+  parent: ResolvingMetadata
 }): Promise<Metadata> {
   const blog = allBlogs.find((b) => b.slug === params.slug);
 
