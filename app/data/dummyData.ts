@@ -649,3 +649,46 @@ export const qualities = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat ",
   },
 ];
+
+export const allBlogs = [
+  {
+    id: 1,
+    title: '10 Reasons To Do A Digital Detox Challenge',
+    slug: '10-reasons-to-do-a-digital-detox-challenge',
+    shortDescription: 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
+    featuredImage: '/images/blog/blog-1.svg',
+    date: 'Feb 14, 2022',
+    comments: 3,
+    user: 'Admin',
+  },
+  {
+    id: 2,
+    title: 'Traditional Soft Pretzels with Sweet Beer Cheese',
+    slug: 'traditional-soft-pretzels-with-sweet-beer-cheese',
+    shortDescription: 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
+    featuredImage: '/images/blog/blog-1.svg',
+    date: 'Feb 14, 2022',
+    comments: 3,
+    user: 'Admin',
+  },
+  {
+    id: 3,
+    title: 'The Ultimate Hangover Burger: Egg in a Hole Burger',
+    slug: 'the-ultimate-hangover-burger-egg-in-a-hole-burger',
+    shortDescription: 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
+    featuredImage: '/images/blog/blog-1.svg',
+    date: 'Feb 14, 2022',
+    comments: 3,
+    user: 'Admin',
+  },
+  {
+    id: 4,
+    title: 'My Favorite Easy Black Pizza Toast Recipe',
+    slug: 'my-favorite-easy-black-pizza-toast-recipe',
+    shortDescription: 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
+    featuredImage: '/images/blog/blog-1.svg',
+    date: 'Feb 14, 2022',
+    comments: 3,
+    user: 'Admin',
+  },
+]
