@@ -692,3 +692,13 @@ export const allBlogs = [
     user: 'Admin',
   },
 ]
+
+export const blogAuthorInfo = {
+  name: "Muhammad Subhan",
+  title: "Blogger / Developer",
+  rating: 5,
+  reviewCount: 1,
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis distinctio, odio eligendi suscipit reprehenderit atque.",
+  avatarUrl: "/images/blog/author-avatar.svg",
+};
