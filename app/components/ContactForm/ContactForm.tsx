@@ -1,10 +1,6 @@
 import React from "react";
-import { CiMail, CiLock, CiUser } from "react-icons/ci";
 import FTInput from "@/app/components/FTInput/FTInput";
 import SolidButton from "../Buttons/SolidButton";
-import Link from "next/link";
-import { FcGoogle } from "react-icons/fc";
-import { GrApple } from "react-icons/gr";
 
 const ContactForm = () => {
   return (
