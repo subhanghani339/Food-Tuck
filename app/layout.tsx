@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Great_Vibes } from "next/font/google";
+import { Inter, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import SessionProviderWrapper from "./components/SessionProvider/SessionProviderWrapper";
 
