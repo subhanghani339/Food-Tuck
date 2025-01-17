@@ -1,54 +1,54 @@
 import React from "react";
-import type { Metadata, ResolvingMetadata } from 'next'
-import { allBlogs } from "@/app/data/dummyData";
+// import type { Metadata, ResolvingMetadata } from 'next'
+// import { allBlogs } from "@/app/data/dummyData";
 import HeaderDark from "@/app/components/Header/HeaderDark";
 import HeroSection from "@/app/components/HeroSection/HeroSection";
 import Footer from "@/app/components/Footer/Footer";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-  parent: ResolvingMetadata
-}): Promise<Metadata> {
-  const blog = allBlogs.find((b) => b.slug === params.slug);
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { slug: string };
+//   parent: ResolvingMetadata
+// }): Promise<Metadata> {
+//   const blog = allBlogs.find((b) => b.slug === params.slug);
 
-  if (!blog) {
-    return {
-      title: "Blog Not Found - Foodtuck",
-      description: "The blog you're looking for does not exist.",
-      openGraph: {
-        title: "Blog Not Found",
-        description: "The blog you're looking for does not exist.",
-        url: `https://ms-foodtuck.vercel.app/blog/${params.slug}`,
-      },
-    };
-  }
+//   if (!blog) {
+//     return {
+//       title: "Blog Not Found - Foodtuck",
+//       description: "The blog you're looking for does not exist.",
+//       openGraph: {
+//         title: "Blog Not Found",
+//         description: "The blog you're looking for does not exist.",
+//         url: `https://ms-foodtuck.vercel.app/blog/${params.slug}`,
+//       },
+//     };
+//   }
 
-  return {
-    title: `${blog.title} - Foodtuck`,
-    description: blog.shortDescription,
-    openGraph: {
-      title: blog.title,
-      description: blog.shortDescription,
-      images: [blog.featuredImage],
-      url: `https://ms-foodtuck.vercel.app/blog/${blog.slug}`,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: blog.title,
-      description: blog.shortDescription,
-      images: [blog.featuredImage],
-    },
-  };
-}
+//   return {
+//     title: `${blog.title} - Foodtuck`,
+//     description: blog.shortDescription,
+//     openGraph: {
+//       title: blog.title,
+//       description: blog.shortDescription,
+//       images: [blog.featuredImage],
+//       url: `https://ms-foodtuck.vercel.app/blog/${blog.slug}`,
+//     },
+//     twitter: {
+//       card: "summary_large_image",
+//       title: blog.title,
+//       description: blog.shortDescription,
+//       images: [blog.featuredImage],
+//     },
+//   };
+// }
 
-const Page = ({ params }: { params: { slug: string } }) => {
-  const blog = allBlogs.find((b) => b.slug === params.slug);
+const Page = () => {
+  // const blog = allBlogs.find((b) => b.slug === params.slug);
 
-  if (!blog) {
-    return <div>Blog not found.</div>;
-  }
+  // if (!blog) {
+  //   return <div>Blog not found.</div>;
+  // }
 
   return (
     <div>
