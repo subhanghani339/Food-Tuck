@@ -49,8 +49,6 @@ export async function generateMetadata({
 const Page = ({ params }: any) => {
   const { slug } = params;
 
-  console.log("slug is", slug)
-
   const blog = allBlogs.find((b) => b.slug === slug);
 
   if (!blog) {
