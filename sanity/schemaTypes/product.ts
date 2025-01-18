@@ -32,15 +32,15 @@ export default defineType({
       title: "User",
       type: "reference",
       to: [{ type: "user" }],
-      validation: (Rule) => Rule.required().error("User reference is required"),
+      validation: (Rule) => Rule.required().error("User is required"),
     },
     {
       name: "productCategory",
       title: "Product Category",
       type: "reference",
-      to: [{ type: "productCategory" }],
+      to: [{ type: "productCategories" }],
       validation: (Rule) =>
-        Rule.required().error("Product category reference is required"),
+        Rule.required().error("Product Category is required"),
     },
   ],
 });
