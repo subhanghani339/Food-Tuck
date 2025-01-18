@@ -6,6 +6,8 @@ interface FTInputProps {
   name: string;
   placeholder: string;
   classes?: string;
+  value?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 const FTInput: React.FC<FTInputProps> = ({
@@ -14,6 +16,8 @@ const FTInput: React.FC<FTInputProps> = ({
   name,
   placeholder,
   classes,
+  value,
+  onChange,
 }) => {
   return (
     <div className="flex items-center gap-2 border border-grey-500 p-2">
@@ -21,6 +25,8 @@ const FTInput: React.FC<FTInputProps> = ({
       <input
         type={type}
         name={name}
+        value={value}
+        onChange={onChange}
         placeholder={placeholder}
         className={`w-full focus-visible:outline-none placeholder:text-grey-200 ${classes}`}
       />
