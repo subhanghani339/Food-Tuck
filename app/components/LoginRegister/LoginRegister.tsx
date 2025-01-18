@@ -57,8 +57,11 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
         password,
       });
 
-      setLoading(false); // Stop loading after the API request is complete
-
+      setLoading(false);
+      if (res?.ok) {
+        toast.success("Login successful!");
+        router.push("/dashboard");
+      }
       if (res?.error) {
         toast.error("Username or password is incorrect");
       }
