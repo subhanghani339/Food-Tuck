@@ -1,9 +1,8 @@
-// app/api/auth/[...nextauth]/route.js
-
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { client } from "@/sanity/lib/client";
+import bcrypt from "bcryptjs";
 
 const handler = NextAuth({
   providers: [
@@ -20,32 +19,60 @@ const handler = NextAuth({
       async authorize(credentials) {
         const { email, password } = credentials;
 
-        // Fetch the user from your database (Sanity, MongoDB, etc.)
+        // Fetch the user from your database
         const user = await client.fetch(
           `*[_type == "user" && email == $email][0]`,
           { email }
         );
 
         if (user) {
-          // You can verify the password here (if hashed)
-          const bcrypt = require("bcryptjs");
           const isPasswordValid = await bcrypt.compare(password, user.password);
 
           if (isPasswordValid) {
-            // If the password matches, return the user object
             return { id: user._id, email: user.email, name: user.name };
           } else {
-            // If password doesn't match, return null
-            throw new Error("Password is invalid");
+            throw new Error("Invalid password");
           }
         } else {
-          // Return null if the user doesn't exist
           throw new Error("User not found");
         }
-        return null; // Return null if user doesn't exist
       },
     }),
   ],
+  callbacks: {
+    async signIn({ user, account }) {
+      if (account.provider === "google") {
+        // Check if user exists in your database
+        const existingUser = await client.fetch(
+          `*[_type == "user" && email == $email][0]`,
+          { email: user.email }
+        );
+
+        if (!existingUser) {
+          // Add the Google user to the database
+          await client.create({
+            _type: "user",
+            name: user.name,
+            email: user.email,
+            password: "", // Optional: Leave blank since this is a Google user
+          });
+        }
+      }
+      return true; // Allow the sign-in
+    },
+    async session({ session, token }) {
+      if (token) {
+        session.user.id = token.id;
+      }
+      return session;
+    },
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+      }
+      return token;
+    },
+  },
   secret: process.env.NEXTAUTH_SECRET, // Optional: a secret to encrypt session data
 });
 
