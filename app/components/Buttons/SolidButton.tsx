@@ -1,8 +1,8 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface SolidButtonProps {
   Icon?: React.ComponentType;
-  text: string;
+  text: string | ReactNode;
   className?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

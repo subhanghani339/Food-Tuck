@@ -4,6 +4,7 @@ interface FTInputProps {
   Icon?: React.ComponentType<{ fontSize: number }>;
   type: string;
   name: string;
+  disabled?:boolean;
   placeholder: string;
   classes?: string;
   value?: string;
@@ -14,6 +15,7 @@ const FTInput: React.FC<FTInputProps> = ({
   Icon,
   type,
   name,
+  disabled,
   placeholder,
   classes,
   value,
@@ -25,6 +27,7 @@ const FTInput: React.FC<FTInputProps> = ({
       <input
         type={type}
         name={name}
+        disabled={disabled}
         value={value}
         onChange={onChange}
         placeholder={placeholder}

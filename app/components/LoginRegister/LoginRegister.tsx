@@ -8,6 +8,8 @@ import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { GrApple } from "react-icons/gr";
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 interface LoginRegisterProps {
   heading?: string;
@@ -21,13 +23,15 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false); // Add loading state
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true); // Start loading when the API request is triggered
 
     // Handle registration via NextAuth.js or custom backend
     if (isSignUp) {
-      // Send the user data to the backend or NextAuth API
       const res = await fetch("/api/auth/register", {
         method: "POST",
         body: JSON.stringify({ name, email, password }),
@@ -38,20 +42,25 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
 
       const data = await res.json();
 
+      setLoading(false); // Stop loading after the API request is complete
+
       if (res.ok) {
-        // Handle success: e.g., redirect user or show message
-        alert("Registration successful!");
+        toast.success("Registration successful!");
+        router.push("/signin");
       } else {
-        // Handle error
-        alert(data.error ?? "Registration failed. Please try again.");
+        toast.error(data.error ?? "Registration failed. Please try again.");
       }
     } else {
-      // Proceed with sign in (for login form)
-      const res = await signIn("credentials", { redirect: false, email, password });
+      const res = await signIn("credentials", {
+        redirect: false,
+        email,
+        password,
+      });
+
+      setLoading(false); // Stop loading after the API request is complete
 
       if (res?.error) {
-        // alert('Username or password is incorrect');
-        console.log(res.error)
+        toast.error("Username or password is incorrect");
       }
     }
   };
@@ -65,6 +74,7 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
             Icon={CiUser}
             type="text"
             name="name"
+            disabled={loading}
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -74,6 +84,7 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
           Icon={CiMail}
           type="email"
           name="email"
+          disabled={loading}
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -82,6 +93,7 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
           Icon={CiLock}
           type="password"
           name="password"
+          disabled={loading}
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -93,8 +105,15 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
           </label>
         </div>
 
+        {/* Show spinner or button text based on loading state */}
         <SolidButton
-          text={heading}
+          text={
+            loading ? (
+              <div className="mx-auto w-6 h-6 border-2 border-t-4 border-white border-t-brand-500 rounded-full animate-spin"></div>
+            ) : (
+              heading
+            )
+          }
           className="text-white rounded-0"
           onClick={handleSubmit}
         />

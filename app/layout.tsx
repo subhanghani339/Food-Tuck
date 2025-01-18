@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Great_Vibes } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import SessionProviderWrapper from "./components/SessionProvider/SessionProviderWrapper";
 
 const greatVibes = Great_Vibes({
@@ -32,7 +34,7 @@ export default function RootLayout({
         <SessionProviderWrapper>
 
         {children}
-
+        <ToastContainer position="bottom-right" />
         <div className="bg-black-500 text-white text-center">Developed By Muhammad Subhan</div>
         </SessionProviderWrapper>
       </body>
