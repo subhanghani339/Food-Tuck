@@ -35,12 +35,56 @@ export default defineType({
       validation: (Rule) => Rule.required().error("User is required"),
     },
     {
-      name: "productCategory",
-      title: "Product Category",
+      name: "parentCategory",
+      title: "Parent Product Category",
       type: "reference",
-      to: [{ type: "productCategories" }],
+      to: [{ type: "parentProductCategory" }],
+      options: {
+        filter: ({ document }: any) => {
+          const userRef = document?.user?._ref;  // Get the reference of the user
+          console.log('User Reference:', userRef);  // Log the user reference
+    
+          // Check if user reference is available and user has parentCategories
+          if (userRef && document?.user?.parentCategories) {
+            const parentCategoriesRefs = document?.user?.parentCategories.map(
+              (cat: any) => cat._ref
+            ); // Extract the _ref of the parent categories
+    
+            console.log('User Parent Categories References:', parentCategoriesRefs); // Log parent categories references
+    
+            return {
+              filter: '_id in $parentCategoriesRefs', // Filter parentCategory based on user's selected categories
+              params: {
+                parentCategoriesRefs, // Pass the user-selected parent category references
+              },
+            };
+          }
+    
+          return {}; // Return empty filter if no parentCategories
+        },
+      },
       validation: (Rule) =>
-        Rule.required().error("Product Category is required"),
+        Rule.required().error("Parent Product Category is required"),
+    },               
+    {
+      name: "childCategory",
+      title: "Child Product Category",
+      type: "reference",
+      to: [{ type: "childProductCategory" }],
+      options: {
+        filter: ({ document }: any) => {
+          const parentCategoryId = document?.parentCategory?._ref;
+          return parentCategoryId
+            ? {
+                filter: 'parentCategory._ref == $parentCategoryId',
+                params: { parentCategoryId },
+              }
+            : {};
+        },
+      },
+      validation: (Rule) =>
+        Rule.required().error("Child Product Category is required"),
     },
+    
   ],
 });

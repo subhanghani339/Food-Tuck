@@ -2,13 +2,17 @@ import { type SchemaTypeDefinition } from 'sanity'
 import user from './user'
 import product from './product'
 import blog from './blog'
-import productCategories from './productCategories'
+import parentProductCategories from './parentProductCategories'
+import childProductCategories from './childProductCategories'
+import contact from './contact'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     user,
     product,
     blog,
-    productCategories,
+    contact,
+    parentProductCategories,
+    childProductCategories
   ],
 }
