@@ -19,6 +19,14 @@ const handler = NextAuth({
       async authorize(credentials) {
         const { email, password } = credentials;
 
+        if (!email) {
+          throw new Error("Email is required");
+        }
+
+        if (!password) {
+          throw new Error("Password is required");
+        }
+
         // Fetch the user from your database
         const user = await client.fetch(
           `*[_type == "user" && email == $email][0]`,
