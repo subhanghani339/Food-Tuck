@@ -42,13 +42,13 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
 
       const data = await res.json();
 
-      setLoading(false); // Stop loading after the API request is complete
+      setLoading(false);
 
       if (res.ok) {
         toast.success("Registration successful!");
         router.push("/signin");
       } else {
-        toast.error(data.error ?? "Registration failed. Please try again.");
+        toast.error(data?.message ?? "Registration failed. Please try again.");
       }
     } else {
       const res = await signIn("credentials", {

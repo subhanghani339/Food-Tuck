@@ -9,6 +9,33 @@ export async function POST(req: NextRequest) {
 
     console.log("Registering user...", email);
 
+    if(!name){
+      return NextResponse.json({
+        message: 'Name is required',
+        success: false,
+      }, {
+        status: 400
+      })
+    }
+
+    if(!password){
+      return NextResponse.json({
+        message: 'Password is required',
+        success: false,
+      }, {
+        status: 400
+      })
+    }
+
+    if(!email){
+      return NextResponse.json({
+        message: 'Email is required',
+        success: false,
+      }, {
+        status: 400
+      })
+    }
+
     // Check if user exists
     const existingUser = await client.fetch(`
       *[_type == "user" && email == $email][0]`, { email });
