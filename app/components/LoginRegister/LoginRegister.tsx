@@ -48,7 +48,9 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
         toast.success("Registration successful!");
         router.push("/signin");
       } else {
-        toast.error(data?.message ?? "Registration failed. Please try again.");
+        toast.error(data?.message ?? "Registration failed. Please try again.", {
+          toastId: data?.message,
+        });
       }
     } else {
       const res = await signIn("credentials", {
@@ -63,7 +65,9 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
         router.push("/dashboard");
       }
       if (res?.error) {
-        toast.error("Username or password is incorrect");
+        toast.error(res?.error, {
+          toastId: res?.error,
+        });
       }
     }
   };

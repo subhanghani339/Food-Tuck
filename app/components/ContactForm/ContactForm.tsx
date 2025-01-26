@@ -52,11 +52,16 @@ const ContactForm = () => {
         });
       } else {
         toast.error(
-          data.error || "Failed to send your message. Please try again."
+          data.error || "Failed to send your message. Please try again.",
+          {
+            toastId: data?.error,
+          }
         );
       }
     } catch (error) {
-      toast.error("An unexpected error occurred. Please try again.");
+      toast.error("An unexpected error occurred. Please try again.", {
+        toastId: 404,
+      });
     } finally {
       setIsSubmitting(false);
     }
