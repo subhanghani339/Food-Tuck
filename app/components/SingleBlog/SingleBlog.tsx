@@ -18,6 +18,7 @@ const SingleBlog: React.FC<SingleBlogProps> = ({ singleBlog }) => {
     return (
         <div className="container py-8 lg:py-16">
             <div className="grid grid-cols-12 gap-6 mt-0 lg:mt-5">
+                {/* Single Blog */}
                 <div className="col-span-12 lg:col-span-9 order-2 lg:order-1">
                     <BlogPost key={singleBlog.slug} blog={singleBlog} hasReadMore={false} />
                 </div>
