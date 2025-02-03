@@ -1,9 +1,10 @@
 import React from "react";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 import { allBlogs } from "@/app/data/dummyData";
 import HeaderDark from "@/app/components/Header/HeaderDark";
 import HeroSection from "@/app/components/HeroSection/HeroSection";
 import Footer from "@/app/components/Footer/Footer";
+import SingleBlog from "@/app/components/SingleBlog/SingleBlog";
 
 // Generate metadata function for dynamic blog pages
 export async function generateMetadata({
@@ -59,6 +60,7 @@ const Page = ({ params }: any) => {
     <div>
       <HeaderDark />
       <HeroSection heading={"Blog Details"} breadcrumb={`Blog Details`} />
+      <SingleBlog singleBlog = {blog} />
       <Footer classes="bg-black-500 text-white" />
     </div>
   );
