@@ -4,7 +4,7 @@ import { PiArrowLineUpRight } from "react-icons/pi";
 import { BlogMeta } from "./BlogMeta";
 import { allBlogs } from "@/app/data/dummyData";
 
-export const BlogPost = ({ blog }: { blog: (typeof allBlogs)[0] }) => {
+export const BlogPost = ({ blog, hasReadMore = true }: { blog: (typeof allBlogs)[0], hasReadMore?: boolean }) => {
   const { title, featuredImage, date, comments, user, shortDescription, slug } =
     blog;
 
@@ -22,12 +22,12 @@ export const BlogPost = ({ blog }: { blog: (typeof allBlogs)[0] }) => {
         <h3 className="text-grey-100 text-xl font-bold">{title}</h3>
         <hr className="my-6" />
         <p>{shortDescription}</p>
-        <div className="text-brand-500 border border-brand-500 rounded-lg mt-4 py-2 px-8 w-max">
+        {hasReadMore && <div className="text-brand-500 border border-brand-500 rounded-lg mt-4 py-2 px-8 w-max">
           <Link href={`/blog/${slug}`} className="flex items-center">
             Read More
             <PiArrowLineUpRight size={22} className="ml-2 text-brand-500" />
           </Link>
-        </div>
+        </div>}
       </div>
     </div>
   );
