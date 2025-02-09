@@ -129,7 +129,7 @@ const LoginRegister: React.FC<LoginRegisterProps> = ({
           {!isSignUp && (
             <div className="text-grey-300 flex justify-between text-xs">
               <Link href="/signup">Sign Up Here!</Link>
-              <Link href="/signup">Forgot Password?</Link>
+              <Link href="/forgot-password">Forgot Password?</Link>
             </div>
           )}
 
