@@ -4,8 +4,9 @@ interface FTInputProps {
   Icon?: React.ComponentType<{ fontSize: number }>;
   type: string;
   name: string;
+  id?: string;
   disabled?:boolean;
-  placeholder: string;
+  placeholder?: string;
   classes?: string;
   value?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
@@ -15,6 +16,7 @@ const FTInput: React.FC<FTInputProps> = ({
   Icon,
   type,
   name,
+  id,
   disabled,
   placeholder,
   classes,
@@ -27,6 +29,7 @@ const FTInput: React.FC<FTInputProps> = ({
       <input
         type={type}
         name={name}
+        id={id}
         disabled={disabled}
         value={value}
         onChange={onChange}
