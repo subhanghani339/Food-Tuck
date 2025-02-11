@@ -14,5 +14,19 @@ export default {
         { name: "zipCode", title: "Zip Code", type: "string" },
         { name: "address", title: "Address", type: "text" },
         { name: "createdAt", title: "Created At", type: "datetime" },
+        {
+            name: "status",
+            title: "Status",
+            type: "string",
+            options: {
+              list: [
+                { title: "Pending", value: "pending" },
+                { title: "Processing", value: "processing" },
+                { title: "Completed", value: "completed" },
+                { title: "Cancelled", value: "cancelled" },
+              ],
+            },
+            initialValue: "pending",
+          },
     ],
 };
