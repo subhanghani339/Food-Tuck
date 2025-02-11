@@ -5,6 +5,7 @@ import blog from './blog'
 import parentProductCategories from './parentProductCategories'
 import childProductCategories from './childProductCategories'
 import contact from './contact'
+import order from './order'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -13,6 +14,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     blog,
     contact,
     parentProductCategories,
-    childProductCategories
+    childProductCategories,
+    order
   ],
 }
