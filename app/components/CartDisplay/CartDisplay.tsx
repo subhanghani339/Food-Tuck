@@ -11,6 +11,7 @@ export default function CartDisplay() {
   const router = useRouter();
   const [cart, setCart] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [removeLoading, setRemoveLoading] = useState(false);
   const [error, setError] = useState("");
 
   console.log(
@@ -47,6 +48,7 @@ export default function CartDisplay() {
 
   async function handleRemove(productId: string | number) {
     try {
+      setRemoveLoading(true);
       const response = await fetch("/api/cart/remove", {
         method: "POST", // or 'DELETE' if your endpoint was set up for DELETE
         headers: {
@@ -58,16 +60,19 @@ export default function CartDisplay() {
       const data = await response.json();
 
       if (!response.ok) {
+        setRemoveLoading(false);
         toast.error("Error removing product:", data.error);
         return;
       }
       toast.success("Product removed:", data.message);
+      setRemoveLoading(false);
       setCart(cart.filter((product) => product.productId !== productId));
       // Optionally update your local UI state here, for example, by filtering out the removed product from your cart state.
     } catch (error) {
       toast.error("Failed to remove product from cart:", {
         toastId: "error-failed",
       });
+      setRemoveLoading(false);
     }
   }
 
@@ -164,7 +169,7 @@ export default function CartDisplay() {
                     onClick={() => handleRemove(item.productId)}
                     className="hover:text-brand-500 text-lg"
                   >
-                    <RxCross2 className="mx-auto" />
+                    {removeLoading ? <Spinner /> : <RxCross2 className="mx-auto" />}
                   </button>
                 </td>
               </tr>
