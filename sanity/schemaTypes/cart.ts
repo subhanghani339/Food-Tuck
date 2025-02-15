@@ -18,11 +18,11 @@ export default defineType({
         {
           type: "object",
           fields: [
-            { name: "productId", title: "Product ID", type: "string" },
+            { name: "productId", title: "Product ID", type: "number" },
             { name: "name", title: "Product Name", type: "string" },
             { name: "price", title: "Price", type: "number" },
             { name: "quantity", title: "Quantity", type: "number" },
-            { name: "image", title: "Image", type: "url" },
+            { name: "image", title: "Image", type: "string" },
             { 
               name: "total", 
               title: "Total", 

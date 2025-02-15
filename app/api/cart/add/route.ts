@@ -1,12 +1,16 @@
 import { NextResponse } from "next/server";
 import { client } from "@/sanity/lib/client";
-import { getUserSession } from "@/app/lib/auth"; // Function to get logged-in user
+import { getUserSession } from "@/app/lib/auth";
+import { v4 as uuidv4 } from "uuid";
 
 export async function POST(req: Request) {
   try {
     const user = await getUserSession(req);
     if (!user) {
-      return NextResponse.json({ error: "Please login to add product to cart!" }, { status: 401 });
+      return NextResponse.json(
+        { error: "Please login to add product to cart!" },
+        { status: 401 }
+      );
     }
 
     const { productId, name, price, quantity, image } = await req.json();
@@ -28,9 +32,19 @@ export async function POST(req: Request) {
 
       if (productIndex !== -1) {
         updatedItems[productIndex].quantity += quantity;
-        updatedItems[productIndex].total = updatedItems[productIndex].price * updatedItems[productIndex].quantity;
+        updatedItems[productIndex].total =
+          updatedItems[productIndex].price *
+          updatedItems[productIndex].quantity;
       } else {
-        updatedItems.push({ productId, name, price, total, quantity, image });
+        updatedItems.push({
+          _key: uuidv4(),
+          productId,
+          name,
+          price,
+          total,
+          quantity,
+          image,
+        });
       }
 
       await client
@@ -42,7 +56,16 @@ export async function POST(req: Request) {
       await client.create({
         _type: "cart",
         userId: user.email,
-        items: [{ productId, name, price, quantity, image }],
+        items: [
+          {
+            _key: uuidv4(),
+            productId,
+            name,
+            price,
+            quantity,
+            image,
+          },
+        ],
       });
     }
 
