@@ -30,7 +30,6 @@ export interface Product {
     const payload: CartPayload = {
       productId: product.id,
       name: product.name,
-      // Use discountedPrice if available, otherwise originalPrice
       price: product.discountedPrice ?? product.originalPrice,
       quantity,
       image: product.featuredImage,

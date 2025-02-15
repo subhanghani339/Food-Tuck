@@ -14,27 +14,23 @@ export default function CartDisplay() {
   const [removeLoading, setRemoveLoading] = useState(false);
   const [error, setError] = useState("");
 
-  console.log(
-    cart.filter((cart) => cart.id !== 3),
-    "cart"
-  );
+  async function fetchCart() {
+    try {
+      const res = await fetch("/api/cart/get");
+      const data = await res.json();
+      if (res.ok) {
+        setCart(data.cart || []);
+      } else {
+        setError(data.error || "Failed to load cart");
+      }
+    } catch (err) {
+      setError("An unexpected error occurred");
+    } finally {
+      setLoading(false);
+    }
+  }
 
   useEffect(() => {
-    async function fetchCart() {
-      try {
-        const res = await fetch("/api/cart/get");
-        const data = await res.json();
-        if (res.ok) {
-          setCart(data.cart || []);
-        } else {
-          setError(data.error || "Failed to load cart");
-        }
-      } catch (err) {
-        setError("An unexpected error occurred");
-      } finally {
-        setLoading(false);
-      }
-    }
     fetchCart();
   }, []);
 
@@ -67,7 +63,7 @@ export default function CartDisplay() {
       toast.success("Product removed:", data.message);
       setRemoveLoading(false);
       setCart(cart.filter((product) => product.productId !== productId));
-      // Optionally update your local UI state here, for example, by filtering out the removed product from your cart state.
+      await fetchCart()
     } catch (error) {
       toast.error("Failed to remove product from cart:", {
         toastId: "error-failed",
@@ -169,7 +165,11 @@ export default function CartDisplay() {
                     onClick={() => handleRemove(item.productId)}
                     className="hover:text-brand-500 text-lg"
                   >
-                    {removeLoading ? <Spinner /> : <RxCross2 className="mx-auto" />}
+                    {removeLoading ? (
+                      <Spinner />
+                    ) : (
+                      <RxCross2 className="mx-auto" />
+                    )}
                   </button>
                 </td>
               </tr>
