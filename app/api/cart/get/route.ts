@@ -11,7 +11,7 @@ export async function GET(req: Request) {
     
     if (!user || !user.email) {
       return NextResponse.json(
-        { error: "Unauthorized" },
+        { error: "Please Login To View Your Cart!" },
         { status: 401 }
       );
     }
