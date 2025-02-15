@@ -1,18 +1,18 @@
-"use client";
+import React from "react";
 
-import React, { useCallback, useState } from "react";
+interface QuantityInputProps {
+  increment: any;
+  decrement: any;
+  quantity: any;
+  setQuantity: any;
+}
 
-const QuantityInput = () => {
-  const [quantity, setQuantity] = useState(0);
-
-  const increment = useCallback(() => {
-    setQuantity((prev) => prev + 1);
-  }, []);
-
-  const decrement = useCallback(() => {
-    setQuantity((prev) => prev - 1);
-  }, []);
-
+const QuantityInput: React.FC<QuantityInputProps> = ({
+  increment,
+  decrement,
+  quantity,
+  setQuantity,
+}) => {
   return (
     <div className="border border-grey-300 max-w-32 w-full flex justify-between">
       <button

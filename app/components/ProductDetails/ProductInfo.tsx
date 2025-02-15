@@ -2,7 +2,7 @@
 
 import { AllProducts } from "@/app/data/dummyData";
 import { useParams } from "next/navigation";
-import React from "react";
+import React, { useCallback, useState } from "react";
 import StarRatings from "../StarRatings/StarRatings";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import QuantityInput from "../QuantityInput/QuantityInput";
@@ -13,6 +13,8 @@ import { MdOutlineFacebook, MdOutlineYoutubeSearchedFor } from "react-icons/md";
 import { PiYoutubeLogoThin } from "react-icons/pi";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import Image from "next/image";
+import { addToCart } from "@/app/lib/cart";
+import { toast } from "react-toastify";
 
 const ProductInfo = () => {
   const params = useParams();
@@ -45,6 +47,35 @@ const ProductInfo = () => {
     "/icons/product-vk.svg",
     "/icons/product-instagram.svg",
   ];
+
+  const [loading, setLoading] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+
+  console.log(currentProduct, "currentProduct");
+
+  const handleAddToCart = async () => {
+    setLoading(true);
+
+    try {
+      const result = await addToCart(currentProduct, quantity);
+      toast.success("Item added to cart successfully!");
+    } catch (error: any) {
+      toast.error(error.message || "Failed to add item to cart.", {
+        toastId: error.message,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // for quantity input
+  const increment = useCallback(() => {
+    setQuantity((prev) => prev + 1);
+  }, []);
+
+  const decrement = useCallback(() => {
+    setQuantity((prev) => prev - 1);
+  }, []);
 
   return (
     <div>
@@ -90,11 +121,17 @@ const ProductInfo = () => {
 
       {/* quantity input */}
       <div className="flex gap-3">
-        <QuantityInput />
+        <QuantityInput
+          increment={increment}
+          decrement={decrement}
+          quantity={quantity}
+          setQuantity={setQuantity}
+        />
         <SolidButton
           text="Add to cart"
           Icon={HiOutlineShoppingBag}
           className="flex gap-2 items-center text-white hover:opacity-85 transition-opacity duration-300"
+          onClick={handleAddToCart}
         />
       </div>
 
