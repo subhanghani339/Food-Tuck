@@ -103,14 +103,14 @@ export default function CartDisplay() {
 
   return (
     <div className="container py-8 lg:py-16">
-      <table className="min-w-full divide-y divide-gray-200 shadow">
-        <thead className="bg-gray-50">
+      <table className="min-w-full divide-y divide-brand-500 shadow">
+        <thead className="bg-brand-500 text-white">
           <tr>
             {cartTableHeaders.map((head, index) => (
               <th
                 key={index}
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-grey-100 uppercase tracking-wider"
+                className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
               >
                 {head.name}
               </th>

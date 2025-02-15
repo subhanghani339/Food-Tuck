@@ -9,12 +9,10 @@ import QuantityInput from "../QuantityInput/QuantityInput";
 import SolidButton from "../Buttons/SolidButton";
 import { CiHeart } from "react-icons/ci";
 import { IoIosGitCompare } from "react-icons/io";
-import { MdOutlineFacebook, MdOutlineYoutubeSearchedFor } from "react-icons/md";
-import { PiYoutubeLogoThin } from "react-icons/pi";
-import { AiFillTwitterCircle } from "react-icons/ai";
 import Image from "next/image";
 import { addToCart } from "@/app/lib/cart";
 import { toast } from "react-toastify";
+import Spinner from "../Spinner/Spinner";
 
 const ProductInfo = () => {
   const params = useParams();
@@ -128,7 +126,9 @@ const ProductInfo = () => {
           setQuantity={setQuantity}
         />
         <SolidButton
-          text="Add to cart"
+          text={loading 
+            ? <div className="mx-5"> <Spinner /> </div>
+            : "Add to cart"}
           Icon={HiOutlineShoppingBag}
           className="flex gap-2 items-center text-white hover:opacity-85 transition-opacity duration-300"
           onClick={handleAddToCart}
