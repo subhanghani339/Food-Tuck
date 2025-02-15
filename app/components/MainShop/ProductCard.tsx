@@ -5,10 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { CiHeart, CiShoppingCart } from "react-icons/ci";
 import { IoIosGitCompare, IoIosCart } from "react-icons/io";
+import { toast } from "react-toastify";
+import { addToCart } from "@/app/lib/cart";
 
 interface ProductCardProps {
   id: number;
   name: string;
+  product?: any;
   originalPrice: number;
   discountedPrice: null | number;
   inStock: boolean;
@@ -18,12 +21,31 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({
   id,
   name,
+  product,
   originalPrice,
   discountedPrice,
   inStock,
   imageUrl,
 }) => {
   const [showIcon, setShowIcons] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleAddToCart = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const result = await addToCart(product);
+      toast.success("Item added to cart successfully!");
+    } catch (error: any) {
+      toast.error(error.message || "Failed to add item to cart.", {
+        toastId: error.message,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <Link
       href={`/shop-details/${id}`}
@@ -47,8 +69,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
           />
           <CiShoppingCart
             fontSize={30}
-            className="bg-white hover:bg-brand-500 transition-colors duration-300 p-2 rounded-sm text-brand-500 hover:text-white"
-            onClick={(e) => e.preventDefault()}
+            className={`bg-white hover:bg-brand-500 transition-colors duration-300 p-2 rounded-sm text-brand-500 hover:text-white 
+              ${loading ? "opacity-50 pointer-events-none" : ""}`}
+            onClick={(e) => handleAddToCart(e)}
           />
           <IoIosGitCompare
             fontSize={30}

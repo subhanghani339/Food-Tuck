@@ -48,6 +48,7 @@ const MainShop = () => {
               <ProductCard
                 key={index}
                 id={product.id}
+                product={product}
                 name={product.name}
                 originalPrice={product.originalPrice}
                 discountedPrice={product.discountedPrice}
