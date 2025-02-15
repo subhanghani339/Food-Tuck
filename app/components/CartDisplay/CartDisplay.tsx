@@ -130,7 +130,7 @@ export default function CartDisplay() {
                 {/* Product Cell */}
                 <td className="px-6 py-4 whitespace-nowrap flex items-center">
                   <img
-                    className="h-10 w-10 rounded object-cover mr-4"
+                    className="h-24 w-24 rounded object-cover mr-4"
                     src={item.image}
                     alt={item.name}
                   />
