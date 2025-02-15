@@ -23,6 +23,12 @@ export default defineType({
             { name: "price", title: "Price", type: "number" },
             { name: "quantity", title: "Quantity", type: "number" },
             { name: "image", title: "Image", type: "url" },
+            { 
+              name: "total", 
+              title: "Total", 
+              type: "number", 
+              description: "Total cost (price * quantity)", 
+            },
           ],
         },
       ],

@@ -156,7 +156,7 @@ export default function CartDisplay() {
                 </td>
                 {/* Total */}
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  ${(item.price * item.quantity).toFixed(2)}
+                  ${item.total.toFixed(2)}
                 </td>
                 {/* Action */}
                 <td className="px-6 py-4 whitespace-nowrap">

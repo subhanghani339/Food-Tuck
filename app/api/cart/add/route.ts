@@ -17,6 +17,8 @@ export async function POST(req: Request) {
       { userId: user.email }
     );
 
+    const total = price * quantity;
+
     if (existingCart) {
       // Update existing cart: Add product or update quantity
       const updatedItems = [...existingCart.items];
@@ -26,8 +28,9 @@ export async function POST(req: Request) {
 
       if (productIndex !== -1) {
         updatedItems[productIndex].quantity += quantity;
+        updatedItems[productIndex].total = updatedItems[productIndex].price * updatedItems[productIndex].quantity;
       } else {
-        updatedItems.push({ productId, name, price, quantity, image });
+        updatedItems.push({ productId, name, price, total, quantity, image });
       }
 
       await client
