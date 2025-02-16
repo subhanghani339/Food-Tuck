@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Foodtuck - Food Restaurant",
   description:
     "Foodtuck is a vibrant food restaurant offering a variety of delicious dishes, from gourmet meals to quick bites. Enjoy exceptional flavors, fresh ingredients, and a welcoming atmosphere for every meal. Visit us today for an unforgettable dining experience!",
+  robots: "noodp",
 };
 
 export default function RootLayout({
@@ -32,10 +33,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
         <SessionProviderWrapper>
-
-        {children}
-        <ToastContainer position="bottom-right" />
-        <div className="bg-black-500 text-white text-center">Developed By Muhammad Subhan</div>
+          {children}
+          <ToastContainer position="bottom-right" />
+          <div className="bg-black-500 text-white text-center">
+            Developed By Muhammad Subhan
+          </div>
         </SessionProviderWrapper>
       </body>
     </html>
