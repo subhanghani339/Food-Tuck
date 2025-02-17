@@ -6,9 +6,11 @@ import BlogSidebar from "@/app/components/BlogSidebar/BlogSidebar";
 import { blogAuthorInfo } from "@/app/data/dummyData";
 import { getBlogs } from "@/app/actions/getBlogsActions";
 import { Blog } from "@/app/types/blog";
+import { BlogSkeleton } from "@/app/components/Skeleton/BlogSkeleton";
 
-const AllBlogs: React.FC = () => { 
+const AllBlogs: React.FC = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState<Boolean>(false);
 
   const handleSearch = useCallback((query: string) => {
     console.log("Search query:", query);
@@ -16,20 +18,23 @@ const AllBlogs: React.FC = () => {
 
   useEffect(() => {
     async function fetchBlogs() {
+      setLoading(true)
       const data = await getBlogs();
       setBlogs(data);
+      setLoading(false)
     }
     fetchBlogs();
   }, [])
 
-  console.log("The blogs are", blogs);
   return (
     <div className="container py-8 lg:py-16">
       <div className="grid grid-cols-12 gap-6 mt-0 lg:mt-5">
         <div className="col-span-12 lg:col-span-9 order-2 lg:order-1">
-          {blogs.map((blog) => (
-            <BlogPost key={blog.slug} blog={blog} />
-          ))}
+          {loading ?
+            <BlogSkeleton /> :
+            blogs.map((blog) => (
+              <BlogPost key={blog.slug} blog={blog} />
+            ))}
         </div>
 
         {/* Blog Sidebar */}
