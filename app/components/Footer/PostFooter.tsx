@@ -10,11 +10,11 @@ import {
 
 const PostFooter = () => {
   const socialMediaIcons = [
-    FaFacebookF,
-    FaTwitter,
-    FaInstagram,
-    FaYoutube,
-    FaPinterest,
+    { icon: FaFacebookF, url: "/", name: "Facebook" },
+    { icon: FaTwitter, url: "/", name: "Twitter" },
+    { icon: FaInstagram, url: "/", name: "Instagram" },
+    { icon: FaYoutube, url: "/", name: "Youtube" },
+    { icon: FaPinterest, url: "/", name: "Pinterest" },
   ];
 
   const date = new Date();
@@ -25,11 +25,12 @@ const PostFooter = () => {
         <p>Copyright © {date.getFullYear()} by Ayeman. All Rights Reserved.</p>
 
         <div className="flex gap-4">
-          {socialMediaIcons.map((Icons, index) => (
+          {socialMediaIcons.map(({ icon: Icons, url, name }, index) => (
             <Link
-              href={""}
+              href={url}
               key={index}
               className="bg-white text-grey-200 hover:text-brand-500 transition-colors duration-300 rounded-sm p-2"
+              aria-label={name}
             >
               <Icons className="fill-current" />
             </Link>

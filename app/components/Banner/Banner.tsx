@@ -3,7 +3,7 @@ import { CiPlay1 } from "react-icons/ci";
 
 const Banner = () => {
   return (
-    <div className='text-white text-right bg-red-200 mb-14 py-10 bg-[url("/images/home/poster.svg")] bg-cover bg-center'>
+    <div className='text-white text-right bg-red-200 mb-14 py-10 bg-[url("/images/home/poster.jpg")] bg-cover bg-center'>
       <div className="container min-h-[400] flex flex-col justify-center">
         <h3 className="special-text text-2xl text-brand-500">
           Restaurant Active Process
