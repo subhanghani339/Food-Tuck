@@ -3,7 +3,6 @@ import { BlogPost } from "./BlogPost";
 import BlogSidebar from "@/app/components/BlogSidebar/BlogSidebar";
 import { blogAuthorInfo } from "@/app/data/dummyData";
 import { getBlogs } from "@/app/actions/getBlogsActions";
-import { BlogSkeleton } from "@/app/components/Skeleton/BlogSkeleton";
 import { Blog } from "@/app/types/blog";
 
 const AllBlogs = async () => {
