@@ -7,6 +7,7 @@ import childProductCategories from './childProductCategories'
 import contact from './contact'
 import order from './order'
 import cart from './cart'
+import comment from './comment'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -18,5 +19,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     childProductCategories,
     order,
     cart,
+    comment,
   ],
 }

@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { PiArrowLineUpRight } from "react-icons/pi";
 import { BlogMeta } from "./BlogMeta";
-import { allBlogs } from "@/app/data/dummyData";
+import { Blog } from "@/app/types/blog";
 
-export const BlogPost = ({ blog, hasReadMore = true }: { blog: (typeof allBlogs)[0], hasReadMore?: boolean }) => {
-  const { title, featuredImage, date, comments, user, shortDescription, slug } =
+export const BlogPost = ({ blog, hasReadMore = true }: { blog: Blog, hasReadMore?: boolean }) => {
+  const { title, featuredImage, date, commentsCount, user, shortDescription, slug } =
     blog;
 
   return (
@@ -18,7 +18,7 @@ export const BlogPost = ({ blog, hasReadMore = true }: { blog: (typeof allBlogs)
         priority
       />
       <div className="max-w-3xl">
-        <BlogMeta date={date} comments={comments} user={user} />
+        <BlogMeta date={date} comments={commentsCount} user={user} />
         <h3 className="text-grey-100 text-xl font-bold">{title}</h3>
         <hr className="my-6" />
         <p>{shortDescription}</p>

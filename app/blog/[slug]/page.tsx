@@ -1,21 +1,19 @@
 import React from "react";
 import type { Metadata } from "next";
-import { allBlogs } from "@/app/data/dummyData";
 import HeaderDark from "@/app/components/Header/HeaderDark";
 import HeroSection from "@/app/components/HeroSection/HeroSection";
 import Footer from "@/app/components/Footer/Footer";
 import SingleBlog from "@/app/components/SingleBlog/SingleBlog";
+import { getSingleBlog } from "@/app/actions/getBlogsActions";
 
-// Generate metadata function for dynamic blog pages
 export async function generateMetadata({
   params,
 }: {
   params: any;
 }): Promise<Metadata> {
-  // Await params before using slug
   const { slug } = await params;
 
-  const blog = allBlogs.find((b) => b.slug === slug);
+  const blog = await getSingleBlog(slug);
 
   if (!blog) {
     return {
@@ -47,10 +45,10 @@ export async function generateMetadata({
   };
 }
 
-const Page = ({ params }: any) => {
-  const { slug } = params;
+const Page = async ({ params }: any) => {
+  const { slug } = await params;
 
-  const blog = allBlogs.find((b) => b.slug === slug);
+  const blog = await getSingleBlog(slug);
 
   if (!blog) {
     return <div>Blog not found.</div>;
