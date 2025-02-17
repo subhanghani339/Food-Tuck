@@ -14,14 +14,11 @@ interface BlogSidebarProps {
     description: string;
     avatarUrl?: string;
   };
+  onSearch: (query: string) => void;
 }
 
-const BlogSidebar: React.FC<BlogSidebarProps> = ({ authorInfo }) => {
+const BlogSidebar: React.FC<BlogSidebarProps> = ({ authorInfo, onSearch }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
-
-  const handleSearch = (query: string) => {
-    console.log("Search query:", query);
-  };
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -67,7 +64,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ authorInfo }) => {
       >
         {/* Sidebar Content */}
         <div className="h-full overflow-y-auto p-5 lg:p-0">
-          <SearchInput onSearch={handleSearch} />
+          <SearchInput onSearch={onSearch} />
           <AuthorCard {...authorInfo} />
         </div>
       </div>
