@@ -6,6 +6,18 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'status',
+      title: 'Status',
+      type: 'boolean',
+      initialValue: true,
+    }),
+    defineField({
+      name: 'featured',
+      title: 'Featured',
+      type: 'boolean',
+      initialValue: false,
+    }),
+    defineField({
       name: 'title',
       title: 'Blog Title',
       type: 'string',
@@ -60,5 +72,6 @@ export default defineType({
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'comment' }] }],
     }),
+    
   ],
 });

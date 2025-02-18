@@ -1,8 +1,10 @@
 import React from "react";
 import MultiHeading from "../MultiHeading/MultiHeading";
 import BlogCard from "./BlogCard";
+import { getFeaturedBlogs } from "@/app/actions/getBlogsActions";
+import { Blog } from "@/app/types/blog";
 
-const Blogs = () => {
+const Blogs = async () => {
   const singleBlog = [
     {
       image: "/images/home/blog-1.svg",
@@ -24,6 +26,9 @@ const Blogs = () => {
     },
   ];
 
+  const featuredBlogs = await getFeaturedBlogs();
+
+  console.log("THe featured blogs are", featuredBlogs);
   return (
     <div className="container pb-16">
       <MultiHeading
@@ -33,8 +38,8 @@ const Blogs = () => {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-        {singleBlog.map((blog, index) => (
-          <BlogCard key={index} image={blog.image} title={blog.title} date={blog.date} url={blog.url} />
+        {featuredBlogs?.map((blog:Blog, index:number) => (
+          <BlogCard key={index} image={blog.featuredImage} title={blog.title} date={blog.date} url={`/blog/${blog.slug}`} />
         ))}
       </div>
     </div>

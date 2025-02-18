@@ -14,7 +14,15 @@ interface BlogCardProps {
 const BlogCard: React.FC<BlogCardProps> = ({ image, title, date, url }) => {
   return (
     <div className="border hover:scale-105 transition-all duration-700">
-      <Image src={image} alt={title} width={800} height={400} priority />
+      <div className="relative w-full h-[340px]">
+        <Image
+          src={image}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+      </div>
       <div className="px-8 py-8">
         <p className="text-brand-500">{date}</p>
 
