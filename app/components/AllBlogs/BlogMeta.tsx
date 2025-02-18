@@ -2,10 +2,7 @@ import { PiUserCirclePlus } from "react-icons/pi";
 import { IoCalendarNumberOutline } from "react-icons/io5";
 import { GoCommentDiscussion } from "react-icons/go";
 import { MetaItem } from "./MetaItem";
-
-const formatDate = (date: string) => {
-  return new Date().toISOString().split('T')[0];
-}
+import { formatDate } from "@/app/helpers/date";
 
 export const BlogMeta = ({ date, comments, user }: { date: string, comments: number, user: string }) => (
 

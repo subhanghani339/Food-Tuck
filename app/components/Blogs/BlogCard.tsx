@@ -26,7 +26,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ image, title, date, url }) => {
       <div className="px-8 py-8">
         <p className="text-brand-500">{date}</p>
 
-        <h4 className="font-bold text-2xl mt-4 mb-8">{title}</h4>
+        <h4 className="font-bold text-2xl mt-4 mb-8 line-clamp-2">{title}</h4>
 
         <div className="flex justify-between">
           <Link href={url}>
