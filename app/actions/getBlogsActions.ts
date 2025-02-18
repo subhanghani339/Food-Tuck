@@ -2,9 +2,10 @@
 
 import { client as sanityClient } from "@/sanity/lib/client";
 
-export async function getBlogs() {
-    try {
-        const query = `*[_type == "blog" && status == true] | order(date desc) {
+export async function getBlogs(searchQuery?: string) {
+  try {
+    const query = searchQuery
+      ? `*[_type == "blog" && title match $searchQuery + "*"] | order(date desc) {
             _id,
             title,
             "slug": slug.current,
